@@ -113,10 +113,23 @@ $app->get('/Almacen/Ventas/getDetails[/{user}[/{contrasena}[/{isbn}]]]', functio
 });
 
 
-$app->post('/updateProd', function (Request $request, Response $response, $args) {
+$app->post('/setProd', function (Request $request, Response $response, $args) {
     $reqPost = $request->getParsedBody();
-    $data[0]["nombre"] = $reqPost["val1"];
-    $data[0]["apellidos"] = $reqPost["valo1"];
+
+    global $val;
+    global $consulta;
+
+    $user = $reqPost["user"];
+    $pass = $reqPost["pass"];
+    $isbn = $reqPost["isbn"];
+    $producto = $reqPost["producto"];
+
+    $resUsuario = $consulta->obtenerUsuario($user);
+
+    $resCategoria = $consulta->obtenerIbsn($isbn);
+
+    $resProducto = $consulta->obtenerProducto($producto);
+    
 
 
 

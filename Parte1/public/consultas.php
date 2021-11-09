@@ -128,6 +128,10 @@ class consultas
     {
         return $this->read_document('serviciosweb-f4e9a-default-rtdb', "respuestas", $resp);
     }
+    function obtenerProducto($prod)
+    {
+        return $this->read_document('serviciosweb-f4e9a-default-rtdb', "productos", $prod);
+    }
 
     function datos($codigo, $mensaje, $data, $status)
     {
