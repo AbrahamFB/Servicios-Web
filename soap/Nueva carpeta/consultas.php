@@ -16,6 +16,8 @@ class consultas
         $this->proyecto = $proyecto;
     }
 
+
+
     function create_document($project, $collection, $document)
     {
         $url = 'https://' . $project . '.firebaseio.com/' . $collection . '.json';
@@ -110,40 +112,31 @@ class consultas
     }
 
 
-    // function obtenerUsuario($user)
-    // {
-    //     return $this->read_document('serviciosweb-f4e9a-default-rtdb', "usuarios", $user);
-    // }
+    function obtenerUsuario($user)
+    {
+        return $this->read_document('serviciosweb-f4e9a-default-rtdb', "usuarios", $user);
+    }
 
-    // function obtenerCategorias($categoria)
-    // {
-    //     return $this->read_document('serviciosweb-f4e9a-default-rtdb', "productos", $categoria);
-    // }
-    // function obtenerIbsn($isbn)
-    // {
-    //     return $this->read_document('serviciosweb-f4e9a-default-rtdb', "detalles", $isbn);
-    // }
+    function obtenerCategorias($categoria)
+    {
+        return $this->read_document('serviciosweb-f4e9a-default-rtdb', "productos", $categoria);
+    }
+    function obtenerIbsn($isbn)
+    {
+        return $this->read_document('serviciosweb-f4e9a-default-rtdb', "detalles", $isbn);
+    }
 
-    // function obtenerRespuesta($resp)
-    // {
-    //     return $this->read_document('serviciosweb-f4e9a-default-rtdb', "respuestas", $resp);
-    // }
-    // function obtenerProducto($prod)
-    // {
-    //     return $this->read_document('serviciosweb-f4e9a-default-rtdb', "productos", $prod);
-    // }
+    function obtenerRespuesta($resp)
+    {
+        return $this->read_document('serviciosweb-f4e9a-default-rtdb', "respuestas", $resp);
+    }
 
-    // function datos($codigo, $mensaje, $data, $status)
-    // {
-    //     return array(
-    //         'code' => $codigo,
-    //         'message' => $mensaje,
-    //         'data' => $data,
-    //         'status' => $status
-    //     );
-    // }
-
-
-    
+    function datos($codigo, $mensaje, $data, $status){
+        return array(
+            'code' => $codigo,
+            'message' => $mensaje,
+            'data' => $data,
+            'status' => $status
+        );
+    }
 }
-?>
