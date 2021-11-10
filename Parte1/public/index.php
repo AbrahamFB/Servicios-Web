@@ -65,20 +65,71 @@ $app->get('/Almacen/Ventas/getDetails[/{user}[/{contrasena}[/{isbn}]]]', functio
 });
 
 
-$app->post('/setProd', function (Request $request, Response $response, $args) {
+$app->post('/Almacen/setProd', function (Request $request, Response $response, $args) {
     $reqPost = $request->getParsedBody();
 
-    global $val;
-    global $consulta;
+    global $servicio2;
+
+    $user = $reqPost["user"];
+    $pass = $reqPost["pass"];
+    $categoria = $reqPost["categoria"];
+    $producto = $reqPost["producto"];
+
+   
+	$parametros = array('user' => $user, 'pass' => $pass, 'categoria' => $categoria, 'producto' => $producto);
+
+	// Se crea el cliente del servicio
+	$client = new SoapClient( $servicio2, $parametros ); 
+
+
+    // Se invoca el metodo que vamos a probar
+    $result = $client->setProd( $parametros );
+
+    $response->getBody()->write(json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+
+    return $response;
+});
+
+$app->post('/Almacen/updateProd', function (Request $request, Response $response, $args) {
+    $reqPost = $request->getParsedBody();
+
+    global $servicio2;
 
     $user = $reqPost["user"];
     $pass = $reqPost["pass"];
     $isbn = $reqPost["isbn"];
-    $producto = $reqPost["producto"];
+    $detalles = $reqPost["detalles"];
 
+	$parametros = array('user' => $user, 'pass' => $pass, 'isbn' => $isbn, 'detalles' => $detalles);
 
+	// Se crea el cliente del servicio
+	$client = new SoapClient( $servicio2, $parametros ); 
 
-    $response->getBody()->write(json_encode($data, JSON_PRETTY_PRINT));
+    // Se invoca el metodo que vamos a probar
+    $result = $client->updateProd( $parametros );
+
+    $response->getBody()->write(json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+
+    return $response;
+});
+$app->post('/Almacen/deleteProd', function (Request $request, Response $response, $args) {
+    $reqPost = $request->getParsedBody();
+
+    global $servicio2;
+
+    $user = $reqPost["user"];
+    $pass = $reqPost["pass"];
+    $isbn = $reqPost["isbn"];
+   
+	$parametros = array('user' => $user, 'pass' => $pass, 'isbn' => $isbn);
+
+	// Se crea el cliente del servicio
+	$client = new SoapClient( $servicio2, $parametros ); 
+
+    // Se invoca el metodo que vamos a probar
+    $result = $client->deleteProd( $parametros );
+
+    $response->getBody()->write(json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
     return $response;
 });

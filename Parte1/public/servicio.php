@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Rpc/Encoded</title>
+	<title>Document/Literal</title>
 </head>
 <body>
 	<?php
@@ -20,33 +20,33 @@
 			Respuesta  = objeto con atributos
 	**/
 	// WSDL del servicio
-	$servicio='http://localhost:81/WSPersonas.svc?singleWsdl'; 
+	$servicio='http://localhost:81/WSPersonas.svc?wsdl'; 
 
-	 // Parámetros independientes
-	 $id = "1";
-	 // Arreglo de parámetros
-	 $parametros = array('tem:Identificacion' => $id);
-	 
-	 echo '<h2>Parámetros de entrada</h2>';
-	 print_r( $id ) ;
-   
-	 // Se crea el cliente del servicio
-	 $client = new SoapClient( $servicio ); 
-   
-	 // Se invoca el metodo que vamos a probar
-	 $result = $client->ObtenerPersona( $id );
-   
-	 echo '<h2>Valor "dump" de la respuesta</h2>';
-	 var_dump($result);
-   
-	 echo '<h2>Valor "echo" de la respuesta</h2>';
-	 if ( isset($result->Error) ) {
-	   echo 'Mensaje: '.$result->MensajeRespuesta.'<br>';
-	   echo 'Nombre: '.$result->Nombre.'<br>';
-	   echo 'Edad: '.$result->Edad.'<br>';
-	 } else {
-	   echo 'Error: '.$result->Error.'<br>';
-	 }
+	// Parámetros independientes
+	$id = "1";
+	// Arreglo de parámetros
+	$parametros = array('Identificacion' => $id);
+	
+	echo '<h2>Parámetros de entrada</h2>';
+	print_r( $parametros ) ;
+
+	// Se crea el cliente del servicio
+	$client = new SoapClient( $servicio, $parametros ); 
+
+	// Se invoca el metodo que vamos a probar
+	$result = $client->ObtenerPersona( $parametros );
+
+	echo '<h2>Valor "dump" de la respuesta</h2>';
+	var_dump($result);
+
+	echo '<h2>Valor "echo" de la respuesta</h2>';
+	if ( isset($result->ObtenerPersonaResult->Error) ) {
+		echo 'Nombre: '.$result->ObtenerPersonaResult->Nombre.'<br>';
+		echo 'Edad: '.$result->ObtenerPersonaResult->Edad.'<br>';
+		echo 'Mensaje: '.$result->ObtenerPersonaResult->MensajeRespuesta.'<br>';
+	} else {
+		echo 'Error: '.$result->ObtenerPersonaResult->Error.'<br>';
+	}
 	/**
 		Este código es compatible con PHP v5 o superior
 	**/
