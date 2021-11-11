@@ -10,8 +10,8 @@ use Slim\Factory\AppFactory;
 require __DIR__ . '/../vendor/autoload.php';
 
 $app = AppFactory::create();
-$app->setBasePath('/Servicios-Web/Parte1/public');
-error_reporting(0);
+//$app->setBasePath('/Servicios-Web/Parte1/public');
+//error_reporting(0);
 
 $val;
 
@@ -90,8 +90,8 @@ $app->post('/Almacen/setProd', function (Request $request, Response $response, $
     return $response;
 });
 
-$app->post('/Almacen/updateProd', function (Request $request, Response $response, $args) {
-    $reqPost = $request->getParsedBody();
+$app->put('/Almacen/updateProd', function (Request $request, Response $response, $args) {
+    $reqPost = $request->getHeaders();
 
     global $servicio2;
 
@@ -100,7 +100,7 @@ $app->post('/Almacen/updateProd', function (Request $request, Response $response
     $isbn = $reqPost["isbn"];
     $detalles = $reqPost["detalles"];
 
-	$parametros = array('user' => $user, 'pass' => $pass, 'isbn' => $isbn, 'detalles' => $detalles);
+	$parametros = array('user' => $user[0], 'pass' => $pass[0], 'isbn' => $isbn[0], 'detalles' => $detalles[0]);
 
 	// Se crea el cliente del servicio
 	$client = new SoapClient( $servicio2, $parametros ); 
@@ -112,14 +112,14 @@ $app->post('/Almacen/updateProd', function (Request $request, Response $response
 
     return $response;
 });
-$app->post('/Almacen/deleteProd', function (Request $request, Response $response, $args) {
+$app->delete('/Almacen/deleteProd/{user}/{pass}/{isbn}', function (Request $request, Response $response, $args) {
     $reqPost = $request->getParsedBody();
 
     global $servicio2;
 
-    $user = $reqPost["user"];
-    $pass = $reqPost["pass"];
-    $isbn = $reqPost["isbn"];
+    $user = $args["user"];
+    $pass = $args["pass"];
+    $isbn = $args["isbn"];
    
 	$parametros = array('user' => $user, 'pass' => $pass, 'isbn' => $isbn);
 
