@@ -10,8 +10,8 @@ use Slim\Factory\AppFactory;
 require __DIR__ . '/../vendor/autoload.php';
 
 $app = AppFactory::create();
-//$app->setBasePath('/Servicios-Web/Parte1/public');
-//error_reporting(0);
+$app->setBasePath('/Servicios-Web/Parte1/public');
+error_reporting(0);
 
 $val;
 
@@ -22,7 +22,8 @@ $servicio2 = "http://localhost:57720/WSRecursosHumanos.svc?wsdl";
 
 
 $app->get('/', function (Request $request, Response $response, $args) {
-    $response->getBody()->write("Hello world!");
+    // $response->getBody()->write();
+    $response->getBody()->write(json_encode("<pre>Hello world!", JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
     return $response;
 });
 

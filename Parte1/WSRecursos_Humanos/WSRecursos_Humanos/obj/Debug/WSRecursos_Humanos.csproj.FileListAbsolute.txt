@@ -48,3 +48,28 @@ C:\Users\benc-\Dropbox\9 Semestre\Servicios Web\WSRecursos_Humanos\WSRecursos_Hu
 C:\Users\benc-\Dropbox\9 Semestre\Servicios Web\WSRecursos_Humanos\WSRecursos_Humanos\obj\Debug\WSRecursos_Humanos.csproj.CopyComplete
 C:\Users\benc-\Dropbox\9 Semestre\Servicios Web\WSRecursos_Humanos\WSRecursos_Humanos\obj\Debug\WSRecursos_Humanos.dll
 C:\Users\benc-\Dropbox\9 Semestre\Servicios Web\WSRecursos_Humanos\WSRecursos_Humanos\obj\Debug\WSRecursos_Humanos.pdb
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\bin\WSRecursos_Humanos.dll.config
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\bin\WSRecursos_Humanos.dll
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\bin\WSRecursos_Humanos.pdb
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\bin\FireSharp.dll
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\bin\FireSharp.Serialization.JsonNet.dll
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\bin\Microsoft.Threading.Tasks.dll
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\bin\Microsoft.Threading.Tasks.Extensions.dll
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\bin\Newtonsoft.Json.dll
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\bin\RestSharp.dll
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\bin\System.Net.Http.Extensions.dll
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\bin\System.Net.Http.Primitives.dll
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\bin\Microsoft.Threading.Tasks.xml
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\bin\Microsoft.Threading.Tasks.Extensions.xml
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\bin\Newtonsoft.Json.xml
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\bin\RestSharp.xml
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\bin\System.Net.Http.Extensions.xml
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\bin\System.Net.Http.Primitives.xml
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\obj\Debug\WSRecursos_Humanos.csproj.App.config
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\obj\Debug\WSRecursos_Humanos.csproj.AssemblyReference.cache
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\obj\Debug\WSRecursos_Humanos.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\obj\Debug\WSRecursos_Humanos.csproj.CopyComplete
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\obj\Debug\WSRecursos_Humanos.dll
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\obj\Debug\WSRecursos_Humanos.pdb
