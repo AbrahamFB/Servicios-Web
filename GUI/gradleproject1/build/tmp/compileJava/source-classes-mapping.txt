@@ -1,2 +1,0 @@
-gradleproject1/Main.java
- gradleproject1.Main
