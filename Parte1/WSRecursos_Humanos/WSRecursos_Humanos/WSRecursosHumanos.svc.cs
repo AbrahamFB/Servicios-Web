@@ -40,8 +40,8 @@ namespace WSRecursos_Humanos
                         JavaScriptSerializer js = new JavaScriptSerializer();
                         dynamic objeto = js.Deserialize<dynamic>(producto);
                         IEnumerable<dynamic> data = product.Descendants();
-                        string isbn = data.ToArray()[9];
-                        string nombre = data.ToArray()[11];
+                        string isbn = data.ToArray()[5];
+                        string nombre = data.ToArray()[3];
 
                         var detalle = client.get("detalles/" + isbn);
                         if (detalle == null)

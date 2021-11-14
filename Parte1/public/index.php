@@ -86,7 +86,7 @@ $app->post('/Almacen/setProd', function (Request $request, Response $response, $
     // Se invoca el metodo que vamos a probar
     $result = $client->setProd( $parametros );
 
-    $response->getBody()->write(json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+    $response->getBody()->write(json_encode($result->setProdResult, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
     return $response;
 });

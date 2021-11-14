@@ -68,8 +68,8 @@ C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\bin\R
 C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\bin\System.Net.Http.Extensions.xml
 C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\bin\System.Net.Http.Primitives.xml
 C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\obj\Debug\WSRecursos_Humanos.csproj.App.config
-C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\obj\Debug\WSRecursos_Humanos.csproj.AssemblyReference.cache
 C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\obj\Debug\WSRecursos_Humanos.csproj.CoreCompileInputs.cache
 C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\obj\Debug\WSRecursos_Humanos.csproj.CopyComplete
 C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\obj\Debug\WSRecursos_Humanos.dll
 C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\obj\Debug\WSRecursos_Humanos.pdb
+C:\xampp\htdocs\Servicios-Web\Parte1\WSRecursos_Humanos\WSRecursos_Humanos\obj\Debug\WSRecursos_Humanos.csprojAssemblyReference.cache
