@@ -178,6 +178,11 @@ public class App extends javax.swing.JFrame {
         jButton5.setActionCommand("ObtenerProductos");
         jButton5.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         jButton5.setFocusPainted(false);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -380,6 +385,17 @@ public class App extends javax.swing.JFrame {
         jPanel2.revalidate();
         jPanel2.repaint();
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        EliminarProducto op = new EliminarProducto();
+        op.setSize(jPanel2.getWidth(), jPanel2.getHeight());
+        op.setLocation(0, 0);
+        jPanel2.removeAll();
+        jPanel2.add(op, BorderLayout.CENTER);
+        jPanel2.revalidate();
+        jPanel2.repaint();
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments

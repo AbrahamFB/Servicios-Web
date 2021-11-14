@@ -433,7 +433,7 @@ public class InsertarProducto extends javax.swing.JPanel {
             Editorial = editorial.getText();
             Fecha = fecha.getText();
             Precio = precio.getText();
-            Descuento = categoria.getSelectedItem().toString();
+            Descuento = descuento.getSelectedItem().toString();
             
         
             var productoA = new HashMap<String, String>();

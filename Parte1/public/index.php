@@ -11,7 +11,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $app = AppFactory::create();
 $app->setBasePath('/Servicios-Web/Parte1/public');
-error_reporting(0);
+//error_reporting(0);
 
 $val;
 
@@ -101,10 +101,10 @@ $app->put('/Almacen/updateProd', function (Request $request, Response $response,
     $isbn = $reqPost["isbn"];
     $detalles = $reqPost["detalles"];
 
-	$parametros = array('user' => $user[0], 'pass' => $pass[0], 'isbn' => $isbn[0], 'detalles' => $detalles[0]);
+  $parametros = array('user' => $user[0], 'pass' => $pass[0], 'isbn' => $isbn[0], 'detalles' => $detalles[0]);
 
-	// Se crea el cliente del servicio
-	$client = new SoapClient( $servicio2, $parametros ); 
+  // Se crea el cliente del servicio
+  $client = new SoapClient( $servicio2, $parametros ); 
 
     // Se invoca el metodo que vamos a probar
     $result = $client->updateProd( $parametros );
