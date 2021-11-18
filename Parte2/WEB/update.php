@@ -27,12 +27,11 @@
 </head>
 
 
-<body background="imagenes/log.png" style="background-repeat: no-repeat; background-position: center center;">
-
+<body>
 <!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="http://localhost/Servicios-Web/Parte2/WEB/index.php"><img src="imagenes/rh.png" height="70" width="90" ></a>
+    <a class="navbar-brand" href="http://localhost/Servicios-Web/Parte2/WEB/index.php"><img src="imagenes\Gala_logo.png" height="70" width="90" ></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -50,8 +49,7 @@
         </a>
       </li>
     </ul>
-      <form class="d-flex
-      ">
+      <form class="d-flex">
         <input class="form-control me-sm-2" type="text" placeholder="Buscar">
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
       </form>
@@ -60,8 +58,28 @@
 </nav>
 
 
+<h3>OPERACIONES:</h3>
 
-</body>
+<br>
+
+<!--updateUser-->
+<form>
+  <h4>Actualizar usuario.</h4>
+    <div class="form-group">
+      <label for="newUser" class="form-label mt-4">Nuevo nombre de usuario</label>
+      <input type="nuevoUsuario" class="form-control" id="newUser" placeholder="Nombre de usuario" aria-describedby="updateUser">
+    </div>
+    <div class="form-group">
+      <label for="newPass" class="form-label mt-4">Nueva contraseña</label>
+      <input type="newPassword" class="form-control" id="newPass" placeholder="Contraseña" aria-describedby="updateUser">
+    </div>
+    <div>
+      <button type="button" class="btn btn-dark" id="updateUser">Actualizar</button>
+    </div>
+</form>
+
+<br>
+<br>
 
 
 </html>

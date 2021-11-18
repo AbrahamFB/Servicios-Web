@@ -27,12 +27,11 @@
 </head>
 
 
-<body background="imagenes/log.png" style="background-repeat: no-repeat; background-position: center center;">
-
+<body>
 <!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="http://localhost/Servicios-Web/Parte2/WEB/index.php"><img src="imagenes/rh.png" height="70" width="90" ></a>
+    <a class="navbar-brand" href="http://localhost/Servicios-Web/Parte2/WEB/index.php"><img src="imagenes\Gala_logo.png" height="70" width="90" ></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -50,8 +49,7 @@
         </a>
       </li>
     </ul>
-      <form class="d-flex
-      ">
+      <form class="d-flex">
         <input class="form-control me-sm-2" type="text" placeholder="Buscar">
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
       </form>
@@ -60,6 +58,23 @@
 </nav>
 
 
+<h3>OPERACIONES:</h3>
+
+<br>
+
+
+<!--getUser-->
+<form>
+  <h4>Mostrar usuarios.</h4>
+
+  <div class="form-group">
+      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+    </div>
+  
+    <div>
+      <button type="button" class="btn btn-dark" id="getUser">getUser</button>
+    </div>
+</form>
 
 </body>
 
