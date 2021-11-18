@@ -9,6 +9,26 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <style>
+      
+      #titulo{
+          height: 40px;
+          color: #FFFFFF;}
+      #set,#titulo{
+          width: 600px;
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          background-color: #020961;
+          
+      }
+      #set{
+          background-color: #C0E5F8 ;
+      }
+      .form-group{
+          width: 400px;
+          margin-left: auto;
+          margin-right: auto;
+      }
       nav {
 
       padding: 0px;
@@ -57,29 +77,35 @@
   </div>
 </nav>
 
-
-<h3>OPERACIONES:</h3>
-
 <br>
 
 <!--updateUser-->
 <form>
-  <h4>Actualizar usuario.</h4>
+  <h4 id="titulo">Actualizar usuario</h4>
+  <div id="set">
     <div class="form-group">
-      <label for="newUser" class="form-label mt-4">Nuevo nombre de usuario</label>
-      <input type="nuevoUsuario" class="form-control" id="newUser" placeholder="Nombre de usuario" aria-describedby="updateUser">
+      <label for="user" class="form-label mt-4">Usuario</label>
+      <input type="nombreUsuario" class="form-control" id="user" placeholder="Nombre de usuario" aria-describedby="setUser">
     </div>
     <div class="form-group">
-      <label for="newPass" class="form-label mt-4">Nueva contraseña</label>
-      <input type="newPassword" class="form-control" id="newPass" placeholder="Contraseña" aria-describedby="updateUser">
+      <label for="pass" class="form-label mt-4">Nueva Contraseña</label>
+      <input type="password" class="form-control" id="pass" placeholder="Contraseña" aria-describedby="setUser">
     </div>
+    <br>
     <div>
       <button type="button" class="btn btn-dark" id="updateUser">Actualizar</button>
     </div>
+    <br>
+  </div>
 </form>
 
 <br>
 <br>
+
+<br>
+<br>
+
+</body>
 
 
 </html>
