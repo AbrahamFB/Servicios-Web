@@ -9,8 +9,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <style>
-
-#titulo{
+      
+      #titulo{
           height: 40px;
           color: #FFFFFF;}
       #set,#titulo{
@@ -21,13 +21,15 @@
           background-color: #333333;
           
       }
-      #get{
+      #set{
           background-color: #F6F6F6 ;
-          width: 600px;
-          text-align: center;
+      }
+      .form-group{
+          width: 400px;
           margin-left: auto;
           margin-right: auto;
       }
+
     </style>
 
 </head>
@@ -70,28 +72,44 @@
   </div>
 </nav>
 
-
 <br>
 
-
-<!--getUser-->
+<!--setUserInfo-->
 <form>
-  <h4 id="titulo">Ver usuarios</h4>
-  <div id="get">
-   
+  <h4 id="titulo">Actualizar información de usuario</h4>
+  <div id="set">
+    <div class="form-group">
+      <label for="userInfo" class="form-label mt-4">Usuario</label>
+      <input type="nombreUsuario" class="form-control" id="user" placeholder="Nombre de usuario" aria-describedby="searchUser">
+    </div>
+    <button type="button" class="btn btn-dark" id="searchUser">Buscar</button>
+    <br>
     <div class="form-group">
       <label for="exampleTextarea" class="form-label mt-4">Mensaje</label>
-      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+      <textarea class="form-control" id="searchUser" rows="3"></textarea>
     </div>
+    <br>
+    <div class="form-group">
+      <label for="exampleTextarea" class="form-label mt-4">Información</label>
+      <textarea class="form-control" id="updateUserInfo" rows="3"></textarea>
+    </div>
+    <br>
     <div>
-      <button type="button" class="btn btn-dark" id="getUser">getUser</button>
+      <button type="button" class="btn btn-dark" id="updateUserInfo">Actualizar</button>
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="exampleTextarea" class="form-label mt-4">Mensaje</label>
+      <textarea class="form-control" id="RsetUserInfo" rows="3"></textarea>
     </div>
     <br>
   </div>
 </form>
 
-
-
+<br>
+<br>
+<br>
+<br>
 
 </body>
 

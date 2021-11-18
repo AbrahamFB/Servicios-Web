@@ -58,7 +58,7 @@
         <a class="nav-link dropdown" href="set_user_info.php" id="navbarDropdown">Insertar info.</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown" href="#" id="navbarDropdown">Actualizar info.</a>
+        <a class="nav-link dropdown" href="update_user_info.php" id="navbarDropdown">Actualizar info.</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown" href="#" id="navbarDropdown">Ver info.</a>

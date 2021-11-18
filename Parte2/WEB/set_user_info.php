@@ -58,7 +58,7 @@
         <a class="nav-link dropdown" href="set_user_info.php" id="navbarDropdown">Insertar info.</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown" href="#" id="navbarDropdown">Actualizar info.</a>
+        <a class="nav-link dropdown" href="update_user_info.php" id="navbarDropdown">Actualizar info.</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown" href="#" id="navbarDropdown">Ver info.</a>
@@ -80,18 +80,18 @@
   <div id="set">
     <div class="form-group">
       <label for="userInfo" class="form-label mt-4">Usuario</label>
-      <input type="nombreUsuario" class="form-control" id="user" placeholder="Nombre de usuario" aria-describedby="setUserInfo">
+      <input type="nombreUsuario" class="form-control" id="user" placeholder="Nombre de usuario" aria-describedby="searchUser">
+    </div>
+    <button type="button" class="btn btn-dark" id="searchUser">Buscar</button>
+    <br>
+    <div class="form-group">
+      <label for="exampleTextarea" class="form-label mt-4">Mensaje</label>
+      <textarea class="form-control" id="searchUser" rows="3"></textarea>
     </div>
     <br>
     <div class="form-group">
-      <label for="exampleSelect2" class="form-label mt-4">Información</label>
-      <select multiple="" class="form-select" id="UserInfo">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
+      <label for="exampleTextarea" class="form-label mt-4">Información</label>
+      <textarea class="form-control" id="RsetUserInfo" rows="3"></textarea>
     </div>
     <br>
     <div>
@@ -100,7 +100,7 @@
     <br>
     <div class="form-group">
       <label for="exampleTextarea" class="form-label mt-4">Mensaje</label>
-      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+      <textarea class="form-control" id="RsetUserInfo" rows="3"></textarea>
     </div>
     <br>
   </div>
