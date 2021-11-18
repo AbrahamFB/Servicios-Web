@@ -18,30 +18,18 @@
           text-align: center;
           margin-left: auto;
           margin-right: auto;
-          background-color: #020961;
+          background-color: #333333;
           
       }
       #set{
-          background-color: #C0E5F8 ;
+          background-color: #F6F6F6 ;
       }
       .form-group{
           width: 400px;
           margin-left: auto;
           margin-right: auto;
       }
-      nav {
 
-      padding: 0px;
-      border: 0px;
-      margin: 0;
-      }
-      
-      body {
-
-      padding: 5px;
-      border: 5px;
-      margin: 1.0;
-      }
     </style>
 
 </head>
@@ -49,9 +37,9 @@
 
 <body>
 <!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
   <div class="container-fluid">
-    <a class="navbar-brand" href="http://localhost/Servicios-Web/Parte2/WEB/index.php"><img src="imagenes\Gala_logo.png" height="70" width="90" ></a>
+    <a class="navbar-brand" href="http://localhost/Servicios-Web/Parte2/WEB/index.php"><img src="imagenes\Gala_mew_logoV2.png" height="70" width="100" ></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -64,9 +52,16 @@
         <a class="nav-link" href="update.php">Actualizar Usuario</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown" href="get.php" id="navbarDropdown">
-          Ver usuarios
-        </a>
+        <a class="nav-link dropdown" href="get.php" id="navbarDropdown">Ver usuarios</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown" href="set_user_info.php" id="navbarDropdown">Insertar info.</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown" href="#" id="navbarDropdown">Actualizar info.</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown" href="#" id="navbarDropdown">Ver info.</a>
       </li>
     </ul>
       <form class="d-flex">
@@ -94,6 +89,11 @@
     <br>
     <div>
       <button type="button" class="btn btn-dark" id="updateUser">Actualizar</button>
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="exampleTextarea" class="form-label mt-4">Mensaje</label>
+      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
     </div>
     <br>
   </div>

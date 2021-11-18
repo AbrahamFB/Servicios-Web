@@ -9,30 +9,33 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <style>
-      nav {
-
-      padding: 0px;
-      border: 0px;
-      margin: 0;
-      }
       
-      body {
-
-      padding: 5px;
-      border: 5px;
-      margin: 1.0;
+      #titulo{
+          color: #FFFFFF;
+          text-align: center;
+        }
+      #operaciones{
+          width: 600px;
+          text-align: center;
+          color: #FFFFFF;
+          margin-left: auto;
+          margin-right: auto;
+          background-color: #333333;
       }
+   
+
     </style>
+  
 
 </head>
 
 
-<body background="imagenes/log.png" style="background-repeat: no-repeat; background-position: center center;">
+<body background="imagenes\wallpaper.jpg" style="background-repeat: no-repeat; background-position: center center;">
 
 <!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
   <div class="container-fluid">
-    <a class="navbar-brand" href="http://localhost/Servicios-Web/Parte2/WEB/index.php"><img src="imagenes/rh.png" height="70" width="90" ></a>
+    <a class="navbar-brand" href="http://localhost/Servicios-Web/Parte2/WEB/index.php"><img src="imagenes\Gala_mew_logoV2.png" height="70" width="100" ></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -45,19 +48,32 @@
         <a class="nav-link" href="update.php">Actualizar Usuario</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown" href="get.php" id="navbarDropdown">
-          Ver usuarios
-        </a>
+        <a class="nav-link dropdown" href="get.php" id="navbarDropdown">Ver usuarios</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown" href="set_user_info.php" id="navbarDropdown">Insertar info.</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown" href="#" id="navbarDropdown">Actualizar info.</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown" href="#" id="navbarDropdown">Ver info.</a>
       </li>
     </ul>
-      <form class="d-flex
-      ">
+      <form class="d-flex">
         <input class="form-control me-sm-2" type="text" placeholder="Buscar">
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
       </form>
     </div>
   </div>
 </nav>
+
+<br>
+
+<div id="titulo">
+  <H3>BIENVENIDO A</H3>
+  <img src="imagenes\recursos_humanosV2.png" height="350" width="350" >
+</div>
 
 
 
