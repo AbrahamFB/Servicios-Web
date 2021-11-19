@@ -72,28 +72,44 @@
   </div>
 </nav>
 
-
 <br>
 
-
-<!--getUser-->
+<!--updateUserInfo-->
 <form>
-  <h4 id="titulo">Ver usuario</h4>
+  <h4 id="titulo">Actualizar información de usuario</h4>
   <div id="box">
     <div class="form-group">
+      <label for="userInfo" class="form-label mt-4">Usuario</label>
+      <input type="nombreUsuario" class="form-control" id="searchUser" placeholder="Nombre de usuario" aria-describedby="searchUser">
+    </div>
+    <button type="button" class="btn btn-dark" id="searchUser">Buscar</button>
+    <br>
+    <div class="form-group">
       <label for="exampleTextarea" class="form-label mt-4">Mensaje</label>
-      <textarea class="form-control" id="get_info" rows="3"></textarea>
+      <textarea class="form-control" id="RsearchUser" rows="3"></textarea>
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="exampleTextarea" class="form-label mt-4">Información</label>
+      <textarea class="form-control" id="update_info" rows="3"></textarea>
     </div>
     <br>
     <div>
-      <button type="button" class="btn btn-dark" id="setUser">getUser</button>
+      <button type="button" class="btn btn-dark" id="update_info">updateUserInfo</button>
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="exampleTextarea" class="form-label mt-4">Mensaje</label>
+      <textarea class="form-control" id="Rupdate_info" rows="3"></textarea>
     </div>
     <br>
   </div>
 </form>
 
-
-
+<br>
+<br>
+<br>
+<br>
 
 </body>
 

@@ -51,13 +51,13 @@
         <a class="nav-link dropdown" href="get.php" id="navbarDropdown">Ver usuarios</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown" href="set_user_info.php" id="navbarDropdown">Insertar info.</a>
+        <a class="nav-link dropdown" href="set_info.php" id="navbarDropdown">Insertar info.</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown" href="update_user_info.php" id="navbarDropdown">Actualizar info.</a>
+        <a class="nav-link dropdown" href="update_info.php" id="navbarDropdown">Actualizar info.</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown" href="#" id="navbarDropdown">Ver info.</a>
+        <a class="nav-link dropdown" href="get_info.php" id="navbarDropdown">Ver info.</a>
       </li>
     </ul>
       <form class="d-flex">

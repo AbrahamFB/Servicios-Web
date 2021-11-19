@@ -13,7 +13,7 @@
       #titulo{
           height: 40px;
           color: #FFFFFF;}
-      #set,#titulo{
+      #box,#titulo{
           width: 600px;
           text-align: center;
           margin-left: auto;
@@ -21,7 +21,7 @@
           background-color: #333333;
           
       }
-      #set{
+      #box{
           background-color: #F6F6F6 ;
       }
       .form-group{
@@ -55,13 +55,13 @@
         <a class="nav-link dropdown" href="get.php" id="navbarDropdown">Ver usuarios</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown" href="set_user_info.php" id="navbarDropdown">Insertar info.</a>
+        <a class="nav-link dropdown" href="set_info.php" id="navbarDropdown">Insertar info.</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown" href="update_user_info.php" id="navbarDropdown">Actualizar info.</a>
+        <a class="nav-link dropdown" href="update_info.php" id="navbarDropdown">Actualizar info.</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown" href="#" id="navbarDropdown">Ver info.</a>
+        <a class="nav-link dropdown" href="get_info.php" id="navbarDropdown">Ver info.</a>
       </li>
     </ul>
       <form class="d-flex">
@@ -77,7 +77,7 @@
 <!--setUser-->
 <form>
   <h4 id="titulo">Insertar usuario</h4>
-  <div id="set">
+  <div id="box">
     <div class="form-group">
       <label for="user" class="form-label mt-4">Usuario</label>
       <input type="nombreUsuario" class="form-control" id="user" placeholder="Nombre de usuario" aria-describedby="setUser">
@@ -88,12 +88,12 @@
     </div>
     <br>
     <div>
-      <button type="button" class="btn btn-dark" id="setUser">Insertar</button>
+      <button type="button" class="btn btn-dark" id="setUser">setUser</button>
     </div>
     <br>
     <div class="form-group">
       <label for="exampleTextarea" class="form-label mt-4">Mensaje</label>
-      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+      <textarea class="form-control" id="RsetUser" rows="3"></textarea>
     </div>
     <br>
   </div>

@@ -13,7 +13,7 @@
       #titulo{
           height: 40px;
           color: #FFFFFF;}
-      #set,#titulo{
+      #box,#titulo{
           width: 600px;
           text-align: center;
           margin-left: auto;
@@ -21,7 +21,7 @@
           background-color: #333333;
           
       }
-      #set{
+      #box{
           background-color: #F6F6F6 ;
       }
       .form-group{
@@ -55,13 +55,13 @@
         <a class="nav-link dropdown" href="get.php" id="navbarDropdown">Ver usuarios</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown" href="set_user_info.php" id="navbarDropdown">Insertar info.</a>
+        <a class="nav-link dropdown" href="set_info.php" id="navbarDropdown">Insertar info.</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown" href="update_user_info.php" id="navbarDropdown">Actualizar info.</a>
+        <a class="nav-link dropdown" href="update_info.php" id="navbarDropdown">Actualizar info.</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown" href="#" id="navbarDropdown">Ver info.</a>
+        <a class="nav-link dropdown" href="get_info.php" id="navbarDropdown">Ver info.</a>
       </li>
     </ul>
       <form class="d-flex">
@@ -74,33 +74,17 @@
 
 <br>
 
-<!--setUserInfo-->
+<!--getUserInfo-->
 <form>
-  <h4 id="titulo">Actualizar información de usuario</h4>
-  <div id="set">
+  <h4 id="titulo">Ver información de usuario</h4>
+  <div id="box">
     <div class="form-group">
-      <label for="userInfo" class="form-label mt-4">Usuario</label>
-      <input type="nombreUsuario" class="form-control" id="user" placeholder="Nombre de usuario" aria-describedby="searchUser">
-    </div>
-    <button type="button" class="btn btn-dark" id="searchUser">Buscar</button>
-    <br>
-    <div class="form-group">
-      <label for="exampleTextarea" class="form-label mt-4">Mensaje</label>
-      <textarea class="form-control" id="searchUser" rows="3"></textarea>
-    </div>
-    <br>
-    <div class="form-group">
-      <label for="exampleTextarea" class="form-label mt-4">Información</label>
-      <textarea class="form-control" id="updateUserInfo" rows="3"></textarea>
+      <label for="exampleTextarea" class="form-label mt-4">Lista de usuarios</label>
+      <textarea class="form-control" id="get_info" rows="3"></textarea>
     </div>
     <br>
     <div>
-      <button type="button" class="btn btn-dark" id="updateUserInfo">Actualizar</button>
-    </div>
-    <br>
-    <div class="form-group">
-      <label for="exampleTextarea" class="form-label mt-4">Mensaje</label>
-      <textarea class="form-control" id="RsetUserInfo" rows="3"></textarea>
+      <button type="button" class="btn btn-dark" id="get_info">getUserInfo</button>
     </div>
     <br>
   </div>
