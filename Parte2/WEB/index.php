@@ -10,7 +10,7 @@
 
     <style>
       
-      #titulo{
+      #titulo, #texto{
           color: #FFFFFF;
           text-align: center;
         }
@@ -73,6 +73,10 @@
 <div id="titulo">
   <H3>BIENVENIDO A</H3>
   <img src="imagenes\recursos_humanosV2.png" height="350" width="350" >
+</div>
+
+<div id="texto">
+  <h4>Por favor selecciona una de las operaciones del navbar para continuar.</h4>
 </div>
 
 
