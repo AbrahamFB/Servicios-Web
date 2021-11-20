@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    text-decoration: none;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/*navbar styling*/
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Poopins',sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: black;
+    /*background: rgb(39, 38, 38);*/
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: white;
+    font-size: 35px;
+    font-weight: 300;
+}
+.navbar .logo a span{
+color: turquoise;
+font-weight: 600;
+transition: all 0.3s ease;
+}
+.navbar.sticky .logo a{
+    color: turquoise;
+}
+.navbar.sticky .logo a span{
+    color: white;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: turquoise;
+}
+.navbar.sticky .menu li a{
+    color: white;
+}
+.navbar.sticky .menu li a:hover{
+    color: white;
+}
+
+/*menu btn styling*/
+.menu-btn{
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+ /*home section styling*/
+ .home{
+     display: flex;
+     background: url("images/banner6.jpg") no-repeat center;
+     height: 120vh;
+     color: white;
+     min-height: 500px;
+     font-family: 'Poopins',sans-serif;
+ }
+ .home span{
+    color: turquoise;
+}
+ .home .max-width{
+     margin: auto 0 auto 40px;
+ }
+ .home .home-content .text-1{
+    font-size: 27px;
+ }
+.home .home-content .text-2{
+   font-size: 75px;
+   font-weight: 500;
+   margin-left: -3px;
+}
+.home .home-content .text-2 span{
+    font-weight: 550;
+ }
+.home .home-content .text-3{
+   font-size: 40px;
+   margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: turquoise;
+    font-weight: 600;
+}
+.home .home-content a{
+    display: inline-block;
+    background: turquoise;
+    color:black;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 2px solid turquoise;
+    transition: all o.3s ease;
+}
+.home .home-content a:hover{
+    color: turquoise;
+    background: none;
+    
+}
+.home .home-content a{
+    transition: all 0.3s ease;
+}
+
+/*all similar styling content*/
+section{
+    padding: 100px 0;
+}
+.sobreMi, .services, .skills, .comisions{
+    font-family: 'Poopins',sans-serif;
+}
+.sobreMi .sobreMi-content, .services .services-content, .skills .skills-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Poopins',sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: turquoise;
+    transform: translateX(-50%);
+}
+
+/*sobreMi section styling*/
+section .title::after{
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: black;
+    padding: 5px;
+    background: white;
+    transform: translateX(-50%);
+}
+.sobreMi .title::after{
+    content: "¿Quién soy?";
+}
+.sobreMi .sobreMi-content .left{
+    width: 45%;
+}
+.sobreMi .sobreMi-content .left img{
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.sobreMi .sobreMi-content .right{
+    width: 55%;
+}
+.sobreMi .sobreMi-content .right .text{
+    font-family: 'Poopins',sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.sobreMi .sobreMi-content .right .text span{
+    font-weight: 800;
+}
+.sobreMi .sobreMi-content .right p{
+    font-family: 'Poopins',sans-serif;
+    text-align: justify;
+}
+.sobreMi .sobreMi-content .right a{
+
+    display: inline-block;
+    background: black;
+    color:white;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    transition: all 0.3s ease;
+}
+.sobreMi .sobreMi-content .right a:hover{
+    color: black;
+    background: none;
+}
+
+/*services section styling*/
+.services, .comisions{
+    color: black;
+    background: white;
+}
+.services .title::before, .comisions .title::before{
+    background: turquoise;
+}
+.services .title::after, .comisions .title::after{
+    color: black;
+    background: white;
+    content: "Mis servicios";
+}
+.services .services-content .card{
+    color: white;
+    width: calc(45% - 10px);
+    margin-bottom: 40px;
+    background: black;
+    text-align: center;
+    border-radius: 50px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.services .services-content .card:hover{
+    background: turquoise;
+}
+.services .services-content .card .box{
+    transition: all 0.3s ease;
+}
+.services .services-content .card:hover .box{
+    transform: scale(1.05);
+}
+.services .services-content .card i{
+    font-size: 30px;
+    color: turquoise;
+}
+.services .services-content .card:hover i{
+    color: white;
+    transition: color 0.3s ease;
+}
+.services .services-content .card .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0 7px 0;
+}
+
+/*skills section styling*/
+.skills .title::after{
+    content: "¿Qué domino?";
+}
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+.skills .skills-content .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skills-content .left p{
+    text-align: justify;
+}
+.skills .skills-content .left a{
+    display: inline-block;
+    background: black;
+    color:white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    transition: all 0.3s ease;
+}
+.skills .skills-content .left a:hover{
+    color: black;
+    background: none;
+}
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+.skills .skills-content .right .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+}
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: turquoise;
+}
+.skills .skills-content .right .html::before{
+    width: 70%;
+}
+.skills .skills-content .right .css::before{
+    width: 70%;
+}
+.skills .skills-content .right .php::before{
+    width: 70%;
+}
+.skills .skills-content .right .solidworks::before{
+    width: 80%;
+}
+.skills .skills-content .right .procreate::before{
+    width: 90%;
+}
+
+/*comisions section styling*/
+.comisions .title::after{
+    content: "Ejemplos:";
+}
+.comisions .carousel .card{
+    color: white;
+    background: black;
+    border-radius: 30px;
+    padding: 25px 35px;
+    text-align: center;
+}
+.comisions .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.comisions .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.comisions .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 20%;
+    /*border: 5px solid turquoise;*/
+}
+
+
+
+
+/*responsive media query start*/
+@media (max-width: 1300px){
+    .home .max-width{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1104px){
+    .sobreMi .sobreMi-content .left img{
+        height: 350px;
+        width: 350px;
+}
+.services .services-content .card{
+    width: calc(40%);
+    margin-bottom: 40px;
+}
+.skills .skills-content .column{
+    width: 45%;
+    align-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 947px){
+    
+    .menu-btn{
+        font-family: 'Font Awesome 5 Free';
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        font-family: 'Font Awesome 5 Free';
+        content: "\f00d";
+        font-weight: 900;
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        right: -100%;
+        top: 0;
+        background: black;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        right: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+        padding: 9px 25px;
+    }
+    .max-width{
+        max-width: 800px;
+    }
+    .sobreMi .sobreMi-content .column{
+        width: 100%;
+    }
+    .sobreMi .sobreMi-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .sobreMi .sobreMi-content .right{
+        flex: 100%;
+    }
+    .services .services-content .card{
+        width: calc(40%);
+        margin-bottom: 20px;
+        margin: 0 0 40px;
+}
+
+
+    .skills .skills-content .column{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+@media (max-width: 690px){
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+     }
+     .home .home-content .text-3{
+        font-size: 32px;
+     }
+     .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .services .services-content .card, .skills .skills-content .column{
+        width: calc(100%);
+        margin-bottom: 20px;
+        margin: 0 0 60px;
+    }
+}
