@@ -42,6 +42,13 @@
           margin-left: auto;
           margin-right: auto;
       }
+      .mensaje{
+        text-align: left;
+        background-color:#ffffff;
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
     </style>
 
@@ -95,9 +102,18 @@
     </div>
     <br>
 </form>
+</div>
+  <h3 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Mensaje</h3>
+    <div class="mensaje">
+    
+        <output name="code">code: </output>
+        <br>
+        <output name="message">message: </output>
+        <br>
+        <output name="status">status: </output>
     </div>
     <br>
-    <br>
+    </div>
   </div>
 </form>
 

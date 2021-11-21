@@ -166,9 +166,11 @@
     <br>
   </div>
 
-</body>
-<br>
   <br>
+  <br>
+
+</body>
+
 
  <!-- Site footer -->
  <footer class="site-footer">
