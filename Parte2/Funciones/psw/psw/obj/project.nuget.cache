@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kHD9udXaAlwcCiCvOcU1228QNWqDROyi9m5akkHfIQAjWfuraK+rIXaN1cly2aObgVb8WUTtxVYrGUvHVJEENg==",
+  "dgSpecHash": "TdusYOn9YfPmvsJ6qF/aIRye7VNy7pdAo8LBiJ8Z8Iql/1tQE1hrNX0DMxiEJrqSyD35zKhunLQg/VQ3jGLenQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\afb19\\source\\repos\\psw\\psw\\psw.csproj",
+  "projectFilePath": "C:\\Users\\afb19\\Pictures\\d\\dw\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\afb19\\.nuget\\packages\\firesharp\\2.0.4\\firesharp.2.0.4.nupkg.sha512",
     "C:\\Users\\afb19\\.nuget\\packages\\firesharp.serialization.jsonnet\\1.1.0\\firesharp.serialization.jsonnet.1.1.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\afb19\\source\\repos\\psw\\psw\\psw.csproj": {}
+    "C:\\Users\\afb19\\Pictures\\d\\dw\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj": {}
   },
   "projects": {
-    "C:\\Users\\afb19\\source\\repos\\psw\\psw\\psw.csproj": {
+    "C:\\Users\\afb19\\Pictures\\d\\dw\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\afb19\\source\\repos\\psw\\psw\\psw.csproj",
+        "projectUniqueName": "C:\\Users\\afb19\\Pictures\\d\\dw\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj",
         "projectName": "psw",
-        "projectPath": "C:\\Users\\afb19\\source\\repos\\psw\\psw\\psw.csproj",
+        "projectPath": "C:\\Users\\afb19\\Pictures\\d\\dw\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj",
         "packagesPath": "C:\\Users\\afb19\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\afb19\\source\\repos\\psw\\psw\\obj\\",
+        "outputPath": "C:\\Users\\afb19\\Pictures\\d\\dw\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
