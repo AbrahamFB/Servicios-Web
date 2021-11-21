@@ -103,6 +103,17 @@
     </div>
     <br>
     <div class="form-group">
+      <label id="subtitulo" for="exampleSelect1" class="form-label mt-4">Selecciona Rol</label>
+      <select class="form-select" id="exampleSelect1">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+
+    <div class="form-group">
       <label id="subtitulo" for="exampleTextarea" class="form-label mt-4">Información</label>
       <textarea class="form-control" id="update_info" rows="3"></textarea>
     </div>
