@@ -31,16 +31,26 @@ namespace psw
 
             services.AddScoped<TokenService>();
 
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options => {
-                options.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(
-                        Encoding.UTF8.GetBytes(Configuration["Token"])),
-                    ValidateIssuer = false,
-                    ValidateAudience = false
-                };
-            });
+            services
+                 .AddAuthentication(x =>
+                 {
+                     x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                     x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                 })
+                 .AddJwtBearer(x =>
+                 {
+                     x.RequireHttpsMetadata = false;
+                     x.SaveToken = true;
+                     x.TokenValidationParameters = new TokenValidationParameters
+                     {
+                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration["Token"])),
+                         ValidateAudience = false,
+                         ValidateIssuerSigningKey = true,
+                         ValidateIssuer = false
+                     };
+                 });
+            services.AddAuthorization();
+            services.AddSingleton(new TokenService(Configuration));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,7 +73,7 @@ namespace psw
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseAuthentication();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();

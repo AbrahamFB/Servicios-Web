@@ -19,26 +19,21 @@ namespace psw
 
         public TokenService(IConfiguration config)
         {
-            _ssKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Token"]));
+            _ssKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(config["Token"]));
         }
 
-        public string CreateToken(String usuario)
+        public string CreateToken(LoginRequet user)
         {
-            var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name, usuario)
-            };
-
-            var credenciales = new SigningCredentials(_ssKey, SecurityAlgorithms.HmacSha512Signature);
-
+            var tokenHandler = new JwtSecurityTokenHandler();
             var tokenDescriptor = new SecurityTokenDescriptor
             {
-                Subject = new ClaimsIdentity(claims),
-                Expires = System.DateTime.Now.AddDays(1),
-                SigningCredentials = credenciales
+                Subject = new ClaimsIdentity(new Claim[]
+                {
+                    new Claim(ClaimTypes.Name, user.name)
+                }),
+                Expires = DateTime.UtcNow.AddHours(1),
+                SigningCredentials = new SigningCredentials(_ssKey, SecurityAlgorithms.HmacSha256Signature)
             };
-
-            var tokenHandler = new JwtSecurityTokenHandler();
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
 

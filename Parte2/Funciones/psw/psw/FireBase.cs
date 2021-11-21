@@ -34,5 +34,53 @@ namespace psw
         dynamic respuesta = js.Deserialize<dynamic>(res.Body);
         return respuesta;
     }
+
 }
+    public class Respuesta
+    {
+        public Respuesta()
+        {
+            Code = "999";
+            Message = "Error no identificado";
+            Data = "";
+            Status = "error";
+        }
+        public string Code
+        {
+            get; set;
+        }
+        public string Message
+        {
+            get; set;
+        }
+        public string Data
+        {
+            get;
+            set;
+        }
+        public string Status
+        {
+            get; set;
+        }
+        public void updateRespuesta(string code, string message, string status = "error", string data = "")
+        {
+            Message = message;
+            Code = code;
+            Status = status;
+            Data = data;
+        }
+
+        public void getRespuesta(string code, string message, string status = "error", string data = "")
+        {
+            Message = message;
+            Code = code;
+            Status = status;
+            Data = data;
+        }
+    }
+    public class LoginRequet
+    {
+        public string name { get; set; }
+        public string password { get; set; }
+    }
 }
