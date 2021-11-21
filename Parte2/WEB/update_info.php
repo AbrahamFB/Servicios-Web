@@ -105,11 +105,9 @@
     <div class="form-group">
       <label id="subtitulo" for="exampleSelect1" class="form-label mt-4">Selecciona Rol</label>
       <select class="form-select" id="exampleSelect1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
+        <option>Ventas</option>
+        <option>Almacen</option>
+        <option>RH</option>
       </select>
     </div>
 
