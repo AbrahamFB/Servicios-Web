@@ -102,3 +102,4 @@ C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\psw\psw\obj\Debug\ne
 C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\psw\psw\obj\Debug\net6.0\scopedcss\bundle\psw.styles.css
 C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\psw\psw\obj\Debug\net6.0\psw.csproj.CopyComplete
 C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\psw\psw\obj\Debug\net6.0\psw.genruntimeconfig.cache
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\psw\psw\bin\Debug\net6.0\NETCore.Encrypt.dll

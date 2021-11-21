@@ -7,6 +7,8 @@ using FireSharp.Config;
 using FireSharp.Interfaces;
 using FireSharp.Response;
 using System.Web.Script.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace psw
 { 
@@ -31,11 +33,28 @@ namespace psw
     {
         FirebaseResponse res = client.Get(coleccion);
         JavaScriptSerializer js = new JavaScriptSerializer();
-        dynamic respuesta = js.Deserialize<dynamic>(res.Body);
+        var respuesta = JsonConvert.DeserializeObject<dynamic>(res.Body);
+        //dynamic respuesta = js.Deserialize<dynamic>(res.Body);
+        return respuesta;
+    }
+    public Dictionary<string, dynamic> get1(string coleccion)
+    {
+        FirebaseResponse res = client.Get(coleccion);
+            var respuesta = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(res.Body);
+            
         return respuesta;
     }
 
-}
+    public List<userInfo> obtenerInfoUser(string coleccion)
+    {
+        FirebaseResponse res = client.Get(coleccion);
+        JavaScriptSerializer js = new JavaScriptSerializer();
+
+        var respuesta = JsonConvert.DeserializeObject<List<userInfo>>(res.Body);
+        return respuesta;
+  }
+
+    }
     public class Respuesta
     {
         public Respuesta()
@@ -53,7 +72,7 @@ namespace psw
         {
             get; set;
         }
-        public string Data
+        public Object Data
         {
             get;
             set;
@@ -62,7 +81,7 @@ namespace psw
         {
             get; set;
         }
-        public void updateRespuesta(string code, string message, string status = "error", string data = "")
+        public void updateRespuesta(string code, string message, string status = "error", Object data = null)
         {
             Message = message;
             Code = code;
@@ -82,5 +101,13 @@ namespace psw
     {
         public string name { get; set; }
         public string password { get; set; }
+    }
+
+    public class userInfo
+    {
+        public string nombre { get; set; }
+        public string rol { get; set; }
+        public string correo { get; set; }
+        public long telefono { get; set; }
     }
 }

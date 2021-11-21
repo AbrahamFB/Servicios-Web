@@ -80,6 +80,10 @@
               "target": "Package",
               "version": "[2.2.29, )"
             },
+            "NETCore.Encrypt": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
@@ -99,6 +103,10 @@
             "System.Runtime.Serialization.Json": {
               "target": "Package",
               "version": "[4.3.0, )"
+            },
+            "System.Security.Cryptography.Cng": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "System.Text.Json": {
               "target": "Package",
