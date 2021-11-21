@@ -20,6 +20,23 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-23019901-1');
+
+
+      //para crear el JSON
+      document.addEventListener("DOMContentLoaded", function(e) {
+
+      var miForm = document.getElementById('miForm');
+      miForm.onsubmit = function(e) {
+        e.preventDefault();
+        var formData = new FormData(this);
+        var jsonData = {};
+        for (var [k, v] of formData) {
+          jsonData[k] = v;
+        }
+        console.log(jsonData);
+      }
+
+      });
     </script>
 
     <style>
@@ -82,29 +99,36 @@
 <br>
 
 <!--setUser-->
-<form>
+
   <h4 id="titulo">Insertar usuario</h4>
   <div id="box">
+  <form action="" method="post" class="form_contact" id="miForm">
+  <div class="user_info">
+
     <div class="form-group">
-      <label id="subtitulo" for="user" class="form-label mt-4">Usuario</label>
-      <input type="nombreUsuario" class="form-control" id="user" placeholder="Nombre de usuario" aria-describedby="setUser">
-    </div>
-    <div class="form-group">
-      <label id="subtitulo" for="pass" class="form-label mt-4">Contraseña</label>
-      <input type="password" class="form-control" id="pass" placeholder="Contraseña" aria-describedby="setUser">
+    <label for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Nombre de usuario</label>
+    <br>
+    <td><input type="text" name="username" id="username" value="" /></td>
     </div>
     <br>
-    <div>
-      <button type="button" class="btn btn-dark" id="setUser">setUser</button>
+    <div class="form-group">
+    <label for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Contraseña</label>
+    <br>
+    <td><input type="text" name="password" value="" /></td>
     </div>
     <br>
+
+    <button type="submit" value="Enviar" id="btnSend">Enviar</button>
+
+  </div>
+</form>
     <div class="form-group">
       <label id="subtitulo" for="exampleTextarea" class="form-label mt-4">Mensaje</label>
       <textarea class="form-control" id="RsetUser" rows="3"></textarea>
     </div>
     <br>
   </div>
-</form>
+
 
 <br>
 <br>

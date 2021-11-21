@@ -20,6 +20,22 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-23019901-1');
+
+       //para crear el JSON
+       document.addEventListener("DOMContentLoaded", function(e) {
+
+        var miForm = document.getElementById('miForm');
+        miForm.onsubmit = function(e) {
+          e.preventDefault();
+          var formData = new FormData(this);
+          var jsonData = {};
+          for (var [k, v] of formData) {
+            jsonData[k] = v;
+          }
+          console.log(jsonData);
+        }
+
+        });
     </script>
 
     <style>
@@ -84,21 +100,38 @@
 <br>
 
 <!--updateUser-->
-<form>
+
   <h4 id="titulo">Actualizar usuario</h4>
   <div id="box">
-    <div class="form-group">
-      <label id="subtitulo" for="user" class="form-label mt-4">Usuario</label>
-      <input type="nombreUsuario" class="form-control" id="user" placeholder="Nombre de usuario" aria-describedby="updateUser">
-    </div>
-    <div class="form-group">
-      <label id="subtitulo" for="pass" class="form-label mt-4">Nueva Contraseña</label>
-      <input type="password" class="form-control" id="pass" placeholder="Contraseña" aria-describedby="updateUser">
+  <div class="form-group">
+      <label id="subtitulo" for="userInfo" class="form-label mt-4">Usuario</label>
+      <input type="nombreUsuario" class="form-control" id="searchUser" placeholder="Nombre de usuario" aria-describedby="searchUser">
     </div>
     <br>
     <div>
-      <button type="button" class="btn btn-dark" id="updateUser">updateUser</button>
+    <button type="button" class="btn btn-dark" id="searchUser">Buscar</button>
     </div>
+
+    <form action="" method="post" class="form_contact" id="miForm">
+  <div class="user_info">
+
+    <div class="form-group">
+    <label for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Nuevo usuario</label>
+    <br>
+    <td><input type="text" name="username" id="username" value="angel" /></td>
+    </div>
+    <br>
+    <div class="form-group">
+    <label for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Nueva Contraseña</label>
+    <br>
+    <td><input type="text" name="password" value="123456" /></td>
+    </div>
+    <br>
+
+    <button type="submit" value="Enviar" id="btnSend">Enviar</button>
+
+  </div>
+</form>
     <br>
     <div class="form-group">
       <label id="subtitulo" for="exampleTextarea" class="form-label mt-4">Mensaje</label>
@@ -106,7 +139,7 @@
     </div>
     <br>
   </div>
-</form>
+
 
 <br>
 <br>

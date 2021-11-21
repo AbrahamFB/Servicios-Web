@@ -20,6 +20,22 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-23019901-1');
+
+        //para crear el JSON
+        document.addEventListener("DOMContentLoaded", function(e) {
+
+      var miForm = document.getElementById('miForm');
+      miForm.onsubmit = function(e) {
+        e.preventDefault();
+        var formData = new FormData(this);
+        var jsonData = {};
+        for (var [k, v] of formData) {
+          jsonData[k] = v;
+        }
+        console.log(jsonData);
+      }
+
+      });
     </script>
 
     <style>
@@ -85,7 +101,7 @@
 <br>
 
 <!--updateUserInfo-->
-<form>
+
   <h4 id="titulo">Actualizar información de usuario</h4>
   <div id="box">
     <div class="form-group">
@@ -96,39 +112,67 @@
     <div>
     <button type="button" class="btn btn-dark" id="searchUser">Buscar</button>
     </div>
+    
     <br>
     <div class="form-group">
       <label id="subtitulo" for="exampleTextarea" class="form-label mt-4">Mensaje</label>
       <textarea class="form-control" id="RsearchUser" rows="3"></textarea>
     </div>
     <br>
-    <div class="form-group">
-      <label id="subtitulo" for="exampleSelect1" class="form-label mt-4">Selecciona Rol</label>
-      <select class="form-select" id="exampleSelect1">
-        <option>1</option>
-        <option>2</option>
+<form action="" method="post" class="form_contact" id="miForm">
+
+<div class="user_info">
+
+<div class="form-group">
+  <label for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Nombre</label>
+  <br>
+  <td><input type="text" name="name" id="name" value="Angel"/></td>
+  </div>
+  <br>
+  <div class="form-group">
+  <label for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Correo</label>
+  <br>
+  <td><input type="text" name="correo" value="angel@gmail.com" /></td>
+  </div>
+  <br>
+  <div class="form-group">
+ 
+  <div class="form-group">
+      <label id="subtitulo" for="rol" class="form-label mt-4">Selecciona Rol</label>
+      <select type="text" name="rol" id="rol" class="form-select" id="exampleSelect1">
+        <option>ventas</option>
+        <option>recursos humanos</option>
         <option>3</option>
         <option>4</option>
         <option>5</option>
       </select>
     </div>
 
-    <div class="form-group">
-      <label id="subtitulo" for="exampleTextarea" class="form-label mt-4">Información</label>
-      <textarea class="form-control" id="update_info" rows="3"></textarea>
-    </div>
-    <br>
-    <div>
-      <button type="button" class="btn btn-dark" id="update_info">updateUserInfo</button>
-    </div>
-    <br>
-    <div class="form-group">
-      <label id="subtitulo" for="exampleTextarea" class="form-label mt-4">Mensaje</label>
-      <textarea class="form-control" id="Rupdate_info" rows="3"></textarea>
-    </div>
-    <br>
   </div>
+  <br>
+  <div class="form-group">
+  <label for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Telefono</label>
+  <br>
+  <td><input type="text" name="telefono" value="23762378" /></td>
+  </div>
+<br>
+  <button type="submit" value="Enviar" id="btnSend">Enviar</button>
+
+</div>
+
+  
+  <br>
+  <div class="form-group">
+    <label id="subtitulo" for="exampleTextarea" class="form-label mt-4">Mensaje</label>
+    <textarea class="form-control" id="Rset_info" rows="3"></textarea>
+  </div>
+  <br>
+</div>
 </form>
+    
+
+    
+
 
 <br>
 <br>

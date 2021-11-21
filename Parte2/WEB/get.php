@@ -90,8 +90,21 @@
   <h4 id="titulo">Ver usuario</h4>
   <div id="box">
     <div class="form-group">
-      <label id="subtitulo" for="exampleTextarea" class="form-label mt-4">Mensaje</label>
-      <textarea class="form-control" id="get_info" rows="3"></textarea>
+      <!--getUserInfo-->
+<form>
+ 
+  
+    
+     <br>
+      <div class = "container"> <table class = "table table-striped">
+         <h2> Lista de usuarios </h2> <p> </p> <thead> <tr> <th> Nombre del usuario </th> <th> Correo </th><th> Rol </th> <th> Teléfono </th> </tr> </thead> <body> 
+            </body> </table>
+ 
+    </div>
+    <br>
+   
+  
+</form>
     </div>
     <br>
     <div>
