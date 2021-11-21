@@ -101,8 +101,6 @@
     <br>
     <div class="form-group">
       <label id="subtitulo" for="exampleTextarea" class="form-label mt-4">Información</label>
-      <textarea class="form-control" id="set_info" rows="3"></textarea>
-    </div>
     <br>
     <div>
       <button type="button" class="btn btn-dark" id="set_info">setUserInfo</button>
