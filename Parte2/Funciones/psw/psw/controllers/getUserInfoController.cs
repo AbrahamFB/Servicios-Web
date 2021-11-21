@@ -11,5 +11,9 @@ namespace psw.controllers
     [ApiController]
     public class getUserInfoController : ControllerBase
     {
+        public IActionResult Authenticate()
+        {
+            return Ok();
+        }
     }
 }

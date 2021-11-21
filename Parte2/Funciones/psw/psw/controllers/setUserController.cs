@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -7,10 +8,16 @@ using System.Threading.Tasks;
 
 namespace psw.controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class setUserController : ControllerBase
     {
+        private readonly TokenService _tokenService;
+        public setUserController(TokenService token)
+        {
+            _tokenService = token;
+        }
         [HttpGet("{id}")]
         public string Get(int id)
         {
@@ -21,19 +28,29 @@ namespace psw.controllers
                 _ => throw new NotSupportedException("el id no es válido"),
             };
         }
-
-        [HttpPost("ruta")]
-        public string Post(Usuario datos)
+        [HttpGet("get/user")]
+        public ActionResult getUsers([FromHeader] string Authorization)
         {
-            return datos.nombre;
+            FireBase client = new FireBase();
+            return Ok(new
+            {
+                heade1r = Authorization
+            });
+        }   
+
+        [AllowAnonymous]
+        [HttpPost("login")]
+        public ActionResult Post([FromBody]LoginRequet user)
+        {
+            var token = _tokenService.CreateToken(user);
+            return Ok(new
+            {
+                token = token
+            }) ;
+
         }
     }
-    public class Usuario
-    {
-        public string nombre { get; set; }
-        public string contrasena { get; set; }
-
-    }
+ 
 
 }
 
