@@ -29,6 +29,9 @@ namespace WSRecursos_Humanos
 
         [OperationContract] 
         RespuestaUpdateUserInfo updateUserInfo(string user, string pass, string searchedUser, string userInfoJSON);
+
+        [OperationContract]
+        RespuestaGetUsers getUsers();
     }
     [DataContract]
     public class Respuesta
@@ -61,8 +64,18 @@ namespace WSRecursos_Humanos
         {
             get; set;
         }
+
+
         
         public void updateRespuesta(string code, string message, string status = "error", string data = "")
+        {
+            Message = message;
+            Code = code;
+            Status = status;
+            Data = data;
+        }
+
+        public void getRespuesta(string code, string message, string status = "error", string data = "")
         {
             Message = message;
             Code = code;
@@ -89,6 +102,13 @@ namespace WSRecursos_Humanos
     }
     [DataContract]
     public class RespuestaUpdateUserInfo : Respuesta
+    {
+
+    }
+
+
+    [DataContract]
+    public class RespuestaGetUsers : Respuesta
     {
 
     }

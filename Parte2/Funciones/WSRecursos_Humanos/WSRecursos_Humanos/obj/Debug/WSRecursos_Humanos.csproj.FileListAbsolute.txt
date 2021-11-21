@@ -23,3 +23,28 @@ C:\Users\benc-\Dropbox\8vo Semestre\Servicios Web\Prácticas\Práctica 6\WSRecur
 C:\Users\benc-\Dropbox\8vo Semestre\Servicios Web\Prácticas\Práctica 6\WSRecursos_Humanos\WSRecursos_Humanos\bin\System.Net.Http.Extensions.xml
 C:\Users\benc-\Dropbox\8vo Semestre\Servicios Web\Prácticas\Práctica 6\WSRecursos_Humanos\WSRecursos_Humanos\bin\System.Net.Http.Primitives.xml
 C:\Users\benc-\Dropbox\8vo Semestre\Servicios Web\Prácticas\Práctica 6\WSRecursos_Humanos\WSRecursos_Humanos\obj\Debug\WSRecursos_Humanos.csproj.App.config
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\obj\Debug\WSRecursos_Humanos.csproj.App.config
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\obj\Debug\WSRecursos_Humanos.csproj.AssemblyReference.cache
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\obj\Debug\WSRecursos_Humanos.csproj.CoreCompileInputs.cache
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\obj\Debug\WSRecursos_Humanos.dll
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\obj\Debug\WSRecursos_Humanos.pdb
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\bin\WSRecursos_Humanos.dll.config
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\bin\WSRecursos_Humanos.dll
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\bin\WSRecursos_Humanos.pdb
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\bin\FireSharp.dll
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\bin\FireSharp.Serialization.JsonNet.dll
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\bin\Microsoft.Threading.Tasks.dll
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\bin\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\bin\Newtonsoft.Json.dll
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\bin\RestSharp.dll
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\bin\System.Net.Http.Extensions.dll
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\bin\System.Net.Http.Primitives.dll
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\bin\Microsoft.Threading.Tasks.xml
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\bin\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\bin\Newtonsoft.Json.xml
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\bin\RestSharp.xml
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\bin\System.Net.Http.Extensions.xml
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\bin\System.Net.Http.Primitives.xml
+C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\WSRecursos_Humanos\WSRecursos_Humanos\obj\Debug\WSRecursos_Humanos.csproj.CopyComplete

@@ -311,6 +311,26 @@ namespace WSRecursos_Humanos
             return res;
         }
 
+        public RespuestaGetUsers getUsers()
+        {
+            FireBase client = new FireBase();
+            RespuestaGetUsers res = new RespuestaGetUsers();
+            var respuestas = client.get("respuesta");
+
+
+            //SetResponse response = client.Cliente.Get("/usuarios", );
+
+            var usuarios = client.get("usuarios");
+
+            res.getRespuesta(
+                                           "403",
+                                           respuestas["403"],
+                                           "success",
+                                           usuarios
+                                       );
+            return res;
+        }
+
     }
 
  
