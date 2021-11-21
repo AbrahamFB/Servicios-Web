@@ -39,16 +39,12 @@
     </script>
 
     <style>
-      
-      #titulo{
-          height: 40px;
-          color: #FFFFFF;}
+
       #box,#titulo{
           width: 600px;
           text-align: center;
           margin-left: auto;
           margin-right: auto;
-          background-color: #212529; 
       }
       #subtitulo{
         font-weight: 640;
@@ -60,6 +56,13 @@
           width: 400px;
           margin-left: auto;
           margin-right: auto;
+      }
+      .mensaje{
+        text-align: left;
+        background-color:#ffffff;
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
     </style>
@@ -99,10 +102,11 @@
 
 <!--setUserInfo-->
 
-  <h4 id="titulo">Insertar información de usuario</h4>
+  
   <div id="box">
+    <h1 id="titulo">Insertar información de usuario</h1>
     <div class="form-group">
-      <label id="subtitulo" for="userInfo" class="form-label mt-4">Usuario</label>
+      <h3 id="subtitulo" for="userInfo" class="form-label mt-4">Usuario</h3>
       <input type="nombreUsuario" class="form-control" id="user" placeholder="Nombre de usuario" aria-describedby="search_user">
     </div>
     <br>
@@ -110,98 +114,66 @@
     <button type="button" class="btn btn-dark" id="search_user">Buscar</button>
     </div>
     <br>
-    <div class="form-group">
-      <label id="subtitulo" for="exampleTextarea" class="form-label mt-4">Mensaje</label>
-      <textarea class="form-control" id="Rsearch_user" rows="3"></textarea>
+    <div class = "container"> <table class = "table table-striped">
+         <p> </p> <thead> <tr> <th> Nombre del usuario </th> <th> Correo </th><th> Rol </th> <th> Teléfono </th> </tr> </thead> <body> 
+            </body> </table>
     </div>
-    <br>
+  
     <div class="form-group">
-      <label id="subtitulo" for="exampleTextarea" class="form-label mt-4">Información</label>
-    <br>
+
     <form action="" method="post" class="form_contact" id="miForm">
 
   <div class="user_info">
 
   <div class="form-group">
-    <label for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Nombre</label>
-    <br>
+    <h3 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Nombre</h3>
     <td><input type="text" name="name" id="name" value=""/></td>
     </div>
-    <br>
+    
     <div class="form-group">
-    <label for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Correo</label>
-    <br>
+    <h3 for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Correo</h3>
     <td><input type="text" name="correo" value="" /></td>
     </div>
-    <br>
+    
     <div class="form-group">
-      <label id="subtitulo" for="rol" class="form-label mt-4">Selecciona Rol</label>
+      <h3 id="subtitulo" for="rol" class="form-label mt-4">Rol</h3>
       <select type="text" name="rol" id="rol" class="form-select" id="exampleSelect1">
-        <option>ventas</option>
-        <option>recursos humanos</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
+        <option>Ventas</option>
+        <option>Almacen</option>
+        <option>Recursos humanos</option>
       </select>
     </div>
-    <br>
+    
     <div class="form-group">
-    <label for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Telefono</label>
-    <br>
+    <h3 for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Telefono</h3>
     <td><input type="text" name="telefono" value="" /></td>
     </div>
 <br>
-    <button type="submit" value="Enviar" id="btnSend">Enviar</button>
+    <button type="submit" class="btn btn-dark" value="Enviar" id="btnSend">Enviar</button>
  
   </div>
 
+ 
+  <h3 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Mensaje</h3>
+    <div class="mensaje">
     
-    <br>
-    <div class="form-group">
-      <label id="subtitulo" for="exampleTextarea" class="form-label mt-4">Mensaje</label>
-      <textarea class="form-control" id="Rset_info" rows="3"></textarea>
+        <output name="code">code: </output>
+        <br>
+        <output name="message">message: </output>
+        <br>
+        <output name="status">status: </output>
     </div>
     <br>
   </div>
-</form>
-
-<br>
-<br>
-<br>
-<br>
 
 </body>
-
+<br>
+  <br>
 
  <!-- Site footer -->
  <footer class="site-footer">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12 col-md-6">
-            <h6>Sobre nosotros</h6>
-            <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, tempora officiis? Provident perferendis, maxime, reprehenderit voluptas optio nam praesentium odio eveniet repellat nulla, ab quasi!</p>
-          </div>
-
-          <div class="col-xs-6 col-md-3">
-            <h6>Categorías</h6>
-            <ul class="footer-links">
-              <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-              <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-              <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-            </ul>
-          </div>
-
-          <div class="col-xs-6 col-md-3">
-            <h6>Links</h6>
-            <ul class="footer-links">
-              <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-              <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-              <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
-            </ul>
-          </div>
-        </div>
-        <hr>
-      </div>
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-sm-6 col-xs-12">
