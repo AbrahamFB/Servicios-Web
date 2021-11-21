@@ -40,9 +40,7 @@
 
     <style>
       
-      #titulo{
-          height: 40px;
-          color: #FFFFFF;}
+     
 
       #subtitulo{
         font-weight: 640;
@@ -53,7 +51,7 @@
           text-align: center;
           margin-left: auto;
           margin-right: auto;
-          background-color: #212529;
+          background-color: #F6F6F6;
           
       }
       #box{
@@ -63,6 +61,13 @@
           width: 400px;
           margin-left: auto;
           margin-right: auto;
+      }
+      .mensaje{
+        text-align: left;
+        background-color:#ffffff;
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
     </style>
@@ -101,11 +106,11 @@
 <br>
 
 <!--updateUserInfo-->
-
-  <h4 id="titulo">Actualizar información de usuario</h4>
+  
   <div id="box">
+    <h1 id="titulo">Actualizar información de usuario</h1>
     <div class="form-group">
-      <label id="subtitulo" for="userInfo" class="form-label mt-4">Usuario</label>
+      <h2 id="subtitulo" for="userInfo" class="form-label mt-4">Nombre</h2>
       <input type="nombreUsuario" class="form-control" id="searchUser" placeholder="Nombre de usuario" aria-describedby="searchUser">
     </div>
     <br>
@@ -115,68 +120,60 @@
     
     <br>
     <div class="form-group">
-      <label id="subtitulo" for="exampleTextarea" class="form-label mt-4">Mensaje</label>
-      <textarea class="form-control" id="RsearchUser" rows="3"></textarea>
+      <form>    
+      <div class = "container"> <table class = "table table-striped">
+         <h2> Usuario </h2> <p> </p> <thead> <tr> <th> Nombre </th> <th> Correo </th><th> Rol </th> <th> Teléfono </th> </tr> </thead> <body> 
+            </body> </table>
     </div>
     <br>
-<<<<<<< HEAD
+    </div>
 <form action="" method="post" class="form_contact" id="miForm">
 
 <div class="user_info">
-
 <div class="form-group">
-  <label for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Nombre</label>
-  <br>
+  <h2 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Nombre</h2>
   <td><input type="text" name="name" id="name" value="Angel"/></td>
   </div>
-  <br>
   <div class="form-group">
-  <label for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Correo</label>
-  <br>
+  <h2 for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Correo</h2>
   <td><input type="text" name="correo" value="angel@gmail.com" /></td>
   </div>
-  <br>
   <div class="form-group">
  
   <div class="form-group">
-      <label id="subtitulo" for="rol" class="form-label mt-4">Selecciona Rol</label>
+      <h2 id="subtitulo" for="rol" class="form-label mt-4">Rol</h2>
       <select type="text" name="rol" id="rol" class="form-select" id="exampleSelect1">
-        <option>ventas</option>
-        <option>recursos humanos</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-=======
-    <div class="form-group">
-      <label id="subtitulo" for="exampleSelect1" class="form-label mt-4">Selecciona Rol</label>
-      <select class="form-select" id="exampleSelect1">
         <option>Ventas</option>
         <option>Almacen</option>
-        <option>RH</option>
->>>>>>> f42975cb6a1e3e93fe8729c4fa5a2392b5db6cd8
+        <option>Recursos humanos</option>
       </select>
     </div>
 
   </div>
-  <br>
   <div class="form-group">
-  <label for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Telefono</label>
-  <br>
+  <h2 for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Telefono</h2>
   <td><input type="text" name="telefono" value="23762378" /></td>
   </div>
 <br>
-  <button type="submit" value="Enviar" id="btnSend">Enviar</button>
+  <button type="submit" class="btn btn-dark" value="Enviar" id="btnSend">updateUserInfo</button>
 
 </div>
 
   
   <br>
-  <div class="form-group">
-    <label id="subtitulo" for="exampleTextarea" class="form-label mt-4">Mensaje</label>
-    <textarea class="form-control" id="Rset_info" rows="3"></textarea>
+<h3 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Mensaje</h3>
+    <div class="mensaje">
+    
+        <output name="code">code: </output>
+        <br>
+        <output name="message">message: </output>
+        <br>
+        <output name="status">status: </output>
+    </div>
+    <br>
   </div>
-  <br>
 </div>
+
 </form>
     
 
@@ -193,31 +190,6 @@
  <footer class="site-footer">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12 col-md-6">
-            <h6>Sobre nosotros</h6>
-            <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, tempora officiis? Provident perferendis, maxime, reprehenderit voluptas optio nam praesentium odio eveniet repellat nulla, ab quasi!</p>
-          </div>
-
-          <div class="col-xs-6 col-md-3">
-            <h6>Categorías</h6>
-            <ul class="footer-links">
-              <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-              <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-              <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-            </ul>
-          </div>
-
-          <div class="col-xs-6 col-md-3">
-            <h6>Links</h6>
-            <ul class="footer-links">
-              <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-              <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-              <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
-            </ul>
-          </div>
-        </div>
-        <hr>
-      </div>
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-sm-6 col-xs-12">

@@ -64,19 +64,14 @@
     <a class="dropdown-item" href="set.php" id="navbarDropdown">Insertar Usuario</a>
     <a class="dropdown-item" href="update.php" id="navbarDropdown">Actualizar Usuario</a>
     <a class="dropdown-item" href="get.php" id="navbarDropdown">Ver usuarios</a>
-    <a class="dropdown-item" href="set_info.php" id="navbarDropdown">Insertar info.</a>
-    <a class="dropdown-item" href="update_info.php" id="navbarDropdown">Actualizar info.</a>
-    <a class="dropdown-item" href="get_info.php" id="navbarDropdown">Ver info.</a>
+    <a class="dropdown-item" href="set_info.php" id="navbarDropdown">Insertar información.</a>
+    <a class="dropdown-item" href="update_info.php" id="navbarDropdown">Actualizar información.</a>
+    <a class="dropdown-item" href="get_info.php" id="navbarDropdown">Ver información</a>
       <div class="dropdown-divider"></div>
       <a class="dropdown-item" href="index.php">Inicio</a>
     </div>
-  </li>
-    
+  </li>  
     </ul>
-
-    
-
-    
     </div>
   </div>
 </nav>
@@ -95,39 +90,18 @@
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
 
 </body>
 
 
-  <!-- Site footer -->
-  <footer class="site-footer">
+ <!-- Site footer -->
+ <footer class="site-footer">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12 col-md-6">
-            <h6>Sobre nosotros</h6>
-            <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, tempora officiis? Provident perferendis, maxime, reprehenderit voluptas optio nam praesentium odio eveniet repellat nulla, ab quasi!</p>
-          </div>
-
-          <div class="col-xs-6 col-md-3">
-            <h6>Categorías</h6>
-            <ul class="footer-links">
-              <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-              <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-              <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-            </ul>
-          </div>
-
-          <div class="col-xs-6 col-md-3">
-            <h6>Links</h6>
-            <ul class="footer-links">
-              <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-              <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-              <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
-            </ul>
-          </div>
-        </div>
-        <hr>
-      </div>
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-sm-6 col-xs-12">

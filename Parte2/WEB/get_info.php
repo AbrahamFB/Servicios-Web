@@ -24,10 +24,6 @@
 
     <style>
       
-      #titulo{
-          height: 40px;
-          color: #FFFFFF;
-        }
       #subtitulo{
         font-weight: 640;
       }
@@ -36,8 +32,7 @@
           text-align: center;
           margin-left: auto;
           margin-right: auto;
-          background-color: #212529;
-          
+
       }
       #box{
           background-color: #F6F6F6 ;
@@ -85,18 +80,25 @@
 
 <!--getUserInfo-->
 <form>
-  <h4 id="titulo">Ver información de usuario</h4>
+  
   <div id="box">
+    <h1 id="titulo">Ver información de usuario</h1>
+
     <div class="form-group">
-     <br>
-      <div class = "container"> <table class = "table table-striped">
-         <h2> Lista de usuarios </h2> <p> </p> <thead> <tr> <th> Nombre del usuario </th> <th> Correo </th><th> Rol </th> <th> Teléfono </th> </tr> </thead> <body> 
-            </body> </table>
-    </div>
+      <h3 id="subtitulo" for="userInfo" class="form-label mt-4">Usuario</h3>
+      <input type="nombreUsuario" class="form-control" id="searchUser" placeholder="Nombre de usuario" aria-describedby="get_info">
     </div>
     <br>
     <div>
-      <button type="button" class="btn btn-dark" id="get_info">getUserInfo</button>
+    <button type="button" class="btn btn-dark" id="get_info">getUserInfo</button>
+    </div>
+
+    <div class="form-group">
+     <br>
+      <div class = "container"> <table class = "table table-striped">
+         <h2> Información </h2> <p> </p> <thead> <tr> <th> Nombre </th> <th> Correo </th><th> Rol </th> <th> Teléfono </th> </tr> </thead> <body> 
+            </body> </table>
+    </div>
     </div>
     <br>
   </div>
@@ -117,30 +119,6 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-6">
-            <h6>Sobre nosotros</h6>
-            <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, tempora officiis? Provident perferendis, maxime, reprehenderit voluptas optio nam praesentium odio eveniet repellat nulla, ab quasi!</p>
-          </div>
-
-          <div class="col-xs-6 col-md-3">
-            <h6>Categorías</h6>
-            <ul class="footer-links">
-              <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-              <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-              <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-            </ul>
-          </div>
-
-          <div class="col-xs-6 col-md-3">
-            <h6>Links</h6>
-            <ul class="footer-links">
-              <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-              <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-              <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
-            </ul>
-          </div>
-        </div>
-        <hr>
-      </div>
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-sm-6 col-xs-12">
