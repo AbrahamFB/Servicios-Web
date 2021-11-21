@@ -119,6 +119,7 @@
       <textarea class="form-control" id="RsearchUser" rows="3"></textarea>
     </div>
     <br>
+<<<<<<< HEAD
 <form action="" method="post" class="form_contact" id="miForm">
 
 <div class="user_info">
@@ -145,6 +146,14 @@
         <option>3</option>
         <option>4</option>
         <option>5</option>
+=======
+    <div class="form-group">
+      <label id="subtitulo" for="exampleSelect1" class="form-label mt-4">Selecciona Rol</label>
+      <select class="form-select" id="exampleSelect1">
+        <option>Ventas</option>
+        <option>Almacen</option>
+        <option>RH</option>
+>>>>>>> f42975cb6a1e3e93fe8729c4fa5a2392b5db6cd8
       </select>
     </div>
 
