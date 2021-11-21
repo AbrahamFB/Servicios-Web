@@ -35,3 +35,6 @@ C:\Users\afb19\source\repos\psw\psw\obj\Debug\netcoreapp3.1\psw.dll
 C:\Users\afb19\source\repos\psw\psw\obj\Debug\netcoreapp3.1\psw.pdb
 C:\Users\afb19\source\repos\psw\psw\obj\Debug\netcoreapp3.1\psw.genruntimeconfig.cache
 C:\Users\afb19\source\repos\psw\psw\obj\Debug\netcoreapp3.1\psw.csproj.CopyComplete
+C:\Users\afb19\source\repos\psw\psw\obj\Debug\netcoreapp3.1\psw.csproj.AssemblyReference.cache
+C:\Users\afb19\source\repos\psw\psw\obj\Debug\netcoreapp3.1\Interop.JAVAWEBSTARTLib.dll
+C:\Users\afb19\source\repos\psw\psw\obj\Debug\netcoreapp3.1\psw.csproj.ResolveComReference.cache
