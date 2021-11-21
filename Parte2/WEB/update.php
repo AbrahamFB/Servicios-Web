@@ -106,17 +106,13 @@
   
   <div id="box">
     <h1 id="titulo">Actualizar usuarios</h1>
-  <div class="form-group">
-      <h3 id="subtitulo" for="userInfo" class="form-label mt-4">Usuario</h3>
-      <input type="nombreUsuario" class="form-control" id="searchUser" placeholder="Nombre de usuario" aria-describedby="searchUser">
-    </div>
-    <br>
-    <div>
-    <button type="button" class="btn btn-dark" id="searchUser">Buscar</button>
-    </div>
-
+ 
     <form action="" method="post" class="form_contact" id="miForm">
   <div class="user_info">
+  <div class="form-group">
+    <h3 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Usuario viejo</h3>
+    <td><input type="text" name="oldusername" id="oldusername" value="oldangel" /></td>
+    </div>
 
     <div class="form-group">
     <h3 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Nuevo usuario</h3>
