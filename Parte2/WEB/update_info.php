@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-<title>updateUserInfo</title>
+<title>setUserInfo</title>
 <meta name="viewport" content="initial-scale=1.0">
   <meta charset="utf-8"> 
   <link rel="stylesheet" href="styles.css">
@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="../_assets/css/custom.min.css">
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23019901-1"></script>
-
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -26,7 +25,7 @@
       document.addEventListener("DOMContentLoaded", function(e) {
 
       var miForm = document.getElementById('miForm');
-      miForm.onsubmit = function(e) {
+      miForm.onsubmit = async function(e) {
         e.preventDefault();
         var formData = new FormData(this);
         var jsonData = {};
@@ -34,6 +33,62 @@
           jsonData[k] = v;
         }
         console.log(jsonData);
+
+        let name = jsonData.usernameA;
+        let password = jsonData.passwordA
+        let data = {
+          name,
+          password
+        };
+         var url = 'https://localhost:44332/api/setUser/login';
+         let response  = await fetch(url, {
+         headers: {
+           'Accept': 'application/json',
+           'Content-Type': 'application/json'
+         },
+         body: JSON.stringify(data),
+         method: 'POST', 
+      
+         }).then(res => res.json())
+           .then(response => response);
+      console.log(response);
+      if(jsonData.rol == "Recursos humanos")
+         jsonData.rol = "rh";
+      let userInfo = {
+        rol: jsonData.rol,
+        correo: jsonData.correo,
+        telefono: Number(jsonData.telefono),
+        nombre: jsonData.name,
+
+      }
+      data = {
+        searchedUser: jsonData.searchedUser,
+        userInfoJSON: userInfo
+      }
+
+      url = 'https://localhost:44332/api/setUser/update/user_info';
+      response  = await fetch(url, {
+         headers: {
+           'Accept': 'application/json',
+           'Content-Type': 'application/json',
+           'Authorization': 'Bearer ' + response.token
+         },
+         body: JSON.stringify(data),
+         method: 'POST', 
+      
+         }).then(res => res.json())
+           .then(response => response);
+      console.log(response);
+      let output = document.querySelector('#output');
+      console.log(`output ${output}`);
+      let mensaje;
+      if(response.status === 'success')
+         mensaje = response.message;
+      else
+         mensaje = `Error: ${response.message}`;
+      output.innerHTML = mensaje;
+      
+      console.log(data)
       }
 
       });
@@ -174,26 +229,11 @@
   <td><input type="text" name="searchedUser" id="searchedUser" value="" /></td></h6>
   </div>
   <br>
-  
-  <button type="submit" class="btn btn-dark" value="Enviar" id="btnSend" onclick="Ocultar(),mostrar()">Buscar Usuario</button>
-</form>
-</div>
-<br>
-
-  <!-- formulario para editar al usuario buscado-->
-  <div id="obj2" style="display: none;">
-  <form action="" method="post" class="form_contact" id="miForm2">
   <h5>Ingrese los datos del usuario que desea actualizar: </h5>
+ 
+
   <div class="form-group">
-  <h6 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Nombre de usuario</h6>
-  <td><input type="text" name="username" id="username" value="" /></td>
-  </div>
-  <div class="form-group">
-  <h6 for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Contraseña</h6>
-  <td><input type="text" name="password" value="" /></td>
-  </div>
-  <div class="form-group">
-    <h6 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Nombre</h6>
+    <h6 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Nombre completo</h6>
     <td><input type="text" name="name" id="name" value=""/></td>
     </div>
     
@@ -215,6 +255,15 @@
     <h6 for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Telefono</h6>
     <td><input type="text" name="telefono" value="" /></td>
     </div>
+  <button type="submit" class="btn btn-dark" value="Enviar" id="btnSend">Insertar Usuario</button>
+</form>
+</div>
+<br>
+
+  <!-- formulario para editar al usuario buscado-->
+  <div id="obj2" style="display: none;">
+  <form action="" method="post" class="form_contact" id="miForm2">
+  
   <br>
 
 
@@ -229,7 +278,7 @@
     
         
         <br>
-        <output name="message"> </output>
+        <output name="message" id="output"> </output>
         <br>
         
     </div>
@@ -240,6 +289,7 @@
   <br>
 
 </body>
+
 
  <!-- Site footer -->
  <footer class="site-footer">
