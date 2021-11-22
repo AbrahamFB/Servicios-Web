@@ -25,6 +25,7 @@ namespace psw.controllers
         {
             _tokenService = token;
         }
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public string Get(int id)
         {

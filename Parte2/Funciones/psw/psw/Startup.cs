@@ -16,6 +16,7 @@ namespace psw
 {
     public class Startup
     {
+        private readonly string _MyCors = "MyCors";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -51,6 +52,15 @@ namespace psw
                  });
             services.AddAuthorization();
             services.AddSingleton(new TokenService(Configuration));
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: _MyCors, builder =>
+                {
+                    //builder.WithOrigins("localhost:80")
+                    builder.SetIsOriginAllowed(origin => new Uri(origin).Host == "localhost")
+                    .AllowAnyHeader().AllowAnyMethod();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -71,6 +81,8 @@ namespace psw
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseCors(_MyCors);
 
             app.UseAuthentication();
             app.UseAuthorization();

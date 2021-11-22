@@ -20,6 +20,22 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-23019901-1');
+
+      function sendForm() {      
+      var url = 'https://localhost:44332/api/setUser/login';
+      var data = '{"name": "pruebas1", "password": "12345678a"}';
+
+      fetch(url, {
+        headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+          body: data,
+          method: 'POST', 
+         
+        }).then(res => res.json())
+        .then(response => console.log('Success:', response));
+    }
     </script>
 
     <style>
@@ -125,7 +141,7 @@
   <div id="box">
     <div class="box">
       <br>
-    <form action="" method="post" class="form_contact" id="miForm"> 
+    <form action="" method="post" class="form_contact" id="miForm" onsubmit="return false"> 
     <h5>Ingrese sus credenciales: </h5>
     <h6 for="userA" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Usuario
     <td><input type="text" name="usernameA" id="usernameA" value="" /></td></h6>
@@ -135,7 +151,7 @@
     <td><input type="text" name="passwordA" value="" /></td></h6>
     </div>
     <br>
-    <button type="submit" class="btn btn-dark" value="Enviar" id="btnSend">Ver usuarios</button>
+    <button onclick="sendForm()" type="submit" class="btn btn-dark" value="Enviar" id="btnSend">Ver usuarios</button>
     </form>
     </div>
     <div class="lista">
