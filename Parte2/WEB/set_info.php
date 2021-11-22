@@ -36,21 +36,60 @@
       }
 
       });
+
+
+      ///formulario miform2
+      document.addEventListener("DOMContentLoaded", function(i) {
+
+      var miForm2 = document.getElementById('miForm2');
+      miForm2.onsubmit = function(i) {
+        i.preventDefault();
+        var formData = new FormData(this);
+        var jsonData = {};
+        for (var [k, v] of formData) {
+          jsonData[k] = v;
+        }
+        console.log(jsonData);
+      }
+      });
+
+      function Ocultar(){
+      document.getElementById('obj1').style.display = 'none';
+      }
+      function mostrar(){
+      document.getElementById('obj2').style.display = 'block';
+      }
     </script>
 
     <style>
 
-      #box,#titulo{
-          width: 600px;
-          text-align: center;
+      #titulo{
+        color: #FFFFFF;
+        width: 900px;
+        height: 40px;
+        text-align: center;
           margin-left: auto;
           margin-right: auto;
+          background-color: #000000;
       }
       #subtitulo{
         font-weight: 640;
       }
       #box{
-          background-color: #F6F6F6 ;
+        margin-top: 0px;
+          width: 900px;
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          height: 650px;
+          background-color: #FFFFFF;
+          margin: auto;
+      }
+      .user_info{
+        width: 550px;
+        float: left;
+        height: auto;
+       
       }
       .form-group{
           width: 400px;
@@ -59,10 +98,21 @@
       }
       .mensaje{
         text-align: left;
-        background-color:#ffffff;
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
+        width: 280px;
+        float: left;
+        background-color: #CCC9C9A9;
+        margin-left: 50px;
+        margin-right: 20px;
+        height: 150px;
+      }
+      input{
+        width: 200px;
+      }
+      #usernameA{
+        width: 265px;
+      }
+      #contra{
+        width: 240px;
       }
 
     </style>
@@ -102,41 +152,57 @@
 
 <!--setUserInfo-->
 
-  
+<h2 id="titulo">Insertar información de usuario</h2>
   <div id="box">
-    <h1 id="titulo">Insertar información de usuario</h1>
-    <div class="form-group">
-      <h3 id="subtitulo" for="userInfo" class="form-label mt-4">Usuario</h3>
-      <input type="nombreUsuario" class="form-control" id="user" placeholder="Nombre de usuario" aria-describedby="search_user">
-    </div>
     <br>
-    <div>
-    <button type="button" class="btn btn-dark" id="search_user">Buscar</button>
-    </div>
-    <br>
-    <div class = "container"> <table class = "table table-striped">
-         <p> </p> <thead> <tr> <th> Nombre del usuario </th> <th> Correo </th><th> Rol </th> <th> Teléfono </th> </tr> </thead> <body> 
-            </body> </table>
-    </div>
-  
-    <div class="form-group">
-
-    <form action="" method="post" class="form_contact" id="miForm">
-
   <div class="user_info">
+    <div id="obj1">
 
+<form action="" method="post" class="form_contact" id="miForm">
+<h5>Ingrese sus credenciales: </h5>
+<div class="form-group">
+  <h6 for="userA" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Usuario
+  <td><input type="text" name="usernameA" id="usernameA" value="" /></td></h6>
+  </div>
   <div class="form-group">
-    <h3 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Nombre</h3>
+  <h6 for="passA" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Contraseña
+  <td><input type="text" name="passwordA" value="" id="contra"/></td></h6>
+  </div>
+  <div class="form-group">
+  <h6 for="searchedUser" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Usuario a buscar
+  <td><input type="text" name="searchedUser" id="searchedUser" value="" /></td></h6>
+  </div>
+  <br>
+  
+  <button type="submit" class="btn btn-dark" value="Enviar" id="btnSend" onclick="Ocultar(),mostrar()">Buscar Usuario</button>
+</form>
+</div>
+<br>
+
+  <!-- formulario para editar al usuario buscado-->
+  <div id="obj2" style="display: none;">
+  <form action="" method="post" class="form_contact" id="miForm2">
+  <h5>Ingrese los datos del usuario que desea actualizar: </h5>
+  <div class="form-group">
+  <h6 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Nombre de usuario</h6>
+  <td><input type="text" name="username" id="username" value="" /></td>
+  </div>
+  <div class="form-group">
+  <h6 for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Contraseña</h6>
+  <td><input type="text" name="password" value="" /></td>
+  </div>
+  <div class="form-group">
+    <h6 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Nombre</h6>
     <td><input type="text" name="name" id="name" value=""/></td>
     </div>
     
     <div class="form-group">
-    <h3 for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Correo</h3>
+    <h6 for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Correo</h6>
     <td><input type="text" name="correo" value="" /></td>
     </div>
     
     <div class="form-group">
-      <h3 id="subtitulo" for="rol" class="form-label mt-4">Rol</h3>
+      <h6 id="subtitulo" for="rol" class="form-label mt-4">Rol</h6>
       <select type="text" name="rol" id="rol" class="form-select" id="exampleSelect1">
         <option>Ventas</option>
         <option>Almacen</option>
@@ -145,23 +211,26 @@
     </div>
     
     <div class="form-group">
-    <h3 for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Telefono</h3>
+    <h6 for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Telefono</h6>
     <td><input type="text" name="telefono" value="" /></td>
     </div>
-<br>
-    <button type="submit" class="btn btn-dark" value="Enviar" id="btnSend">Enviar</button>
- 
+  <br>
+
+
+  <button type="submit" class="btn btn-dark" value="Enviar" id="btnSend">setInfo</button>
+</form>
+</div>
   </div>
 
  
   <h3 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Mensaje</h3>
     <div class="mensaje">
     
-        <output name="code">code: </output>
+        
         <br>
-        <output name="message">message: </output>
+        <output name="message"> </output>
         <br>
-        <output name="status">status: </output>
+        
     </div>
     <br>
   </div>

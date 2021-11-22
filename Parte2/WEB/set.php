@@ -41,17 +41,29 @@
 
     <style>
       
-      #box,#titulo{
-          width: 600px;
+      #titulo{
+        color: #FFFFFF;
+        width: 900px;
+        height: 40px;
+        text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          background-color: #000000;
+      }
+      #box{
+        margin-top: 0px;
+          width: 900px;
           text-align: center;
           margin-left: auto;
           margin-right: auto;
+          height: 450px;
+          background-color: #FFFFFF;
+          margin: auto;
+        
       }
       #subtitulo{
         font-weight: 640;
-      }
-      #box{
-          background-color: #F6F6F6 ;
+       
       }
       .form-group{
           width: 400px;
@@ -60,10 +72,25 @@
       }
       .mensaje{
         text-align: left;
-        background-color:#ffffff;
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
+        width: 280px;
+        float: left;
+        background-color: #CCC9C9A9;
+        margin-left: 50px;
+        margin-right: 20px;
+        height: 150px;
+        
+      }
+      .user_info{
+        width: 550px;
+        float: left;
+        height: auto;
+       
+      }
+      input{
+        width: 200px;
+      }
+      #usernameA{
+        width: 225px;
       }
 
     </style>
@@ -103,33 +130,46 @@
 
 <!--setUser-->
 
-  
+<h2 id="titulo">Insertar usuario</h2>
   <div id="box">
-  <h1 id="titulo">Insertar usuario</h1>
-  <form action="" method="post" class="form_contact" id="miForm">
+ <br>
+  
   <div class="user_info">
 
+  <form action="" method="post" class="form_contact" id="miForm">
+  <div class="form-group">
+    <h5>Ingrese sus credenciales: </h5>
+    <h6 for="userA" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Usuario
+    <td><input type="text" name="usernameA" id="usernameA" value="" /></td></h6>
+    </div>
     <div class="form-group">
-    <h3 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Nombre de usuario</h3>
+    <h6 for="passA" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Contraseña
+    <td><input type="text" name="passwordA" value="" /></td></h6>
+    </div>
+    <br>
+    <h5>Ingrese los datos del usuario que desea registrar: </h5>
+    <div class="form-group">
+    <h6 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Nombre de usuario</h6>
     <td><input type="text" name="username" id="username" value="" /></td>
     </div>
     <div class="form-group">
-    <h3 for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Contraseña</h3>
+    <h6 for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Contraseña</h6>
     <td><input type="text" name="password" value="" /></td>
     </div>
     <br>
 
     <button type="submit" class="btn btn-dark" value="Enviar" id="btnSend">setUser</button>
-
+  </form>
   </div>
-  <h3 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Mensaje</h3>
+  <h5 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Mensaje: </h5>
     <div class="mensaje">
     
-        <output name="code">code: </output>
         <br>
-        <output name="message">message: </output>
         <br>
-        <output name="status">status: </output>
+        <output name="message"> </output>
+        <br>
+        <br>
+        
     </div>
     <br>
   </div>
