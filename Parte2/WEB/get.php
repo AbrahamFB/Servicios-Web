@@ -24,31 +24,63 @@
 
     <style>
 
-      #subtitulo{
-        font-weight: 640;
+#titulo{
+        color: #FFFFFF;
+        width: 900px;
+        height: 40px;
+        text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          background-color: #000000;
       }
-      #box,#titulo{
-          width: 600px;
+      #box{
+        margin-top: 0px;
+          width: 900px;
           text-align: center;
           margin-left: auto;
           margin-right: auto;
-          
+          height: 500px;
+          background-color: #FFFFFF;
+          margin: auto;
+      } 
+      input{
+        width: 200px;
       }
-      #box{
-          background-color: #F6F6F6 ;
+      #usernameA{
+        width: 225px;
+      } 
+      
+      #subtitulo{
+        font-weight: 640;
+       
       }
       .form-group{
           width: 400px;
           margin-left: auto;
           margin-right: auto;
       }
+      .lista{
+          
+        
+          width: 550px;
+        float: left;
+        height: auto;
+        
+      }
       .mensaje{
         text-align: left;
-        background-color:#ffffff;
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
+        width: 280px;
+        float: left;
+        background-color: #CCC9C9A9;
+        margin-left: 50px;
+        margin-right: 20px;
+        height: 150px;
+        
       }
+      .conteiner{
+        height: auto;
+      }
+      
 
     </style>
 
@@ -88,34 +120,48 @@
 
 
 <!--getUser-->
-<form>
-  
+
+<h2 id="titulo">Ver usuarios</h2>
   <div id="box">
-    <h1 id="titulo">Ver usuarios</h1>
+    <div class="box">
+      <br>
+    <form action="" method="post" class="form_contact" id="miForm"> 
+    <h5>Ingrese sus credenciales: </h5>
+    <h6 for="userA" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Usuario
+    <td><input type="text" name="usernameA" id="usernameA" value="" /></td></h6>
+    
     <div class="form-group">
+    <h6 for="passA" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Contraseña
+    <td><input type="text" name="passwordA" value="" /></td></h6>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-dark" value="Enviar" id="btnSend">Ver usuarios</button>
+    </form>
+    </div>
+    <div class="lista">
       <!--getUserInfo-->
-<form>    
+ 
      <br>
       <div class = "container"> <table class = "table table-striped">
          <h3> Lista de usuarios </h3> <p> </p> <thead> <tr> <th> Nombre del usuario </th> <th> Correo </th><th> Rol </th> <th> Teléfono </th> </tr> </thead> <body> 
             </body> </table>
     </div>
     <br>
-</form>
 </div>
-  <h3 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Mensaje</h3>
+<br>
+  <h5 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Mensaje</h5>
     <div class="mensaje">
     
-        <output name="code">code: </output>
+        
         <br>
-        <output name="message">message: </output>
+        <output name="message"> </output>
         <br>
-        <output name="status">status: </output>
+        
     </div>
     <br>
-    </div>
   </div>
-</form>
+    
+
 
 <br>
 <br>

@@ -46,16 +46,20 @@
         font-weight: 640;
       }
 
-      #box,#titulo{
+      #titulo{
           width: 600px;
           text-align: center;
           margin-left: auto;
           margin-right: auto;
-          background-color: #F6F6F6;
+          background-color: #000000;
           
       }
       #box{
-          background-color: #F6F6F6 ;
+        width: 600px;
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          background-color: #FFFFFF ;
       }
       .form-group{
           width: 400px;
