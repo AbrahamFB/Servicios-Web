@@ -55,13 +55,7 @@ namespace psw
     }
 
 
-        public List<userInfo> obtenerInfoUser(string coleccion)
-    {
-        FirebaseResponse res = client.Get(coleccion);
-
-        var respuesta = JsonConvert.DeserializeObject<List<userInfo>>(res.Body);
-        return respuesta;
-  }
+    
 
     }
     public class Respuesta
@@ -119,13 +113,21 @@ namespace psw
         public string newPass { get; set; }
     }
 
-    public class userInfo
+    public class UserInfoJSON
     {
         public string nombre { get; set; }
         public string rol { get; set; }
         public string correo { get; set; }
         public long telefono { get; set; }
     }
+    
+
+    public class userInfo
+    {
+        public string searchedUser { get; set; }
+        public UserInfoJSON userInfoJSON { get; set; }
+    }
+
     public class Encrypt
     {
         public static string GetMD5(string str)

@@ -37,6 +37,12 @@ namespace psw
         }";
             Schema = JsonSchema.Parse(schemaJSONUser);
         }
+        public bool IsJsonValid(string JSON)
+        {
+            try { return JObject.Parse(JSON) != null; } catch { }
+
+            return false;
+        }
         public JsonSchema Schema { get; set; }
         public bool isComplete(int Length, JObject element)
         {

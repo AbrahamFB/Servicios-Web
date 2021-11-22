@@ -49,16 +49,16 @@ namespace psw.controllers
             var user = tokenS.Claims.First(claim => claim.Type == "unique_name").Value;
             var pass = tokenS.Claims.First(claim => claim.Type == "nameid").Value;
 
-            
 
-            var datos = user + " " +pass;
+
+            var datos = user + " " + pass;
             var respuesta = new Respuesta();
             var contr = client.get("usuarios/" + user);
-                if (contr != null)
+            if (contr != null)
             {
 
                 var permiso = client.get("usuarios_info/" + user);
-         
+
                 if (Encrypt.GetMD5(pass) == contr)
                 {
 
@@ -68,14 +68,14 @@ namespace psw.controllers
                         var usuarios = client.get1("usuarios/");
                         var resp205 = client.get("respuesta/" + 205);
 
-                        respuesta.updateRespuesta("205", resp205, "success", usuarios.Keys);                       
+                        respuesta.updateRespuesta("205", resp205, "success", usuarios.Keys);
                     }
                     else
                     {
                         var resp305 = client.get("respuesta/" + 305);
                         respuesta.updateRespuesta("305", resp305);
                     }
-                    
+
                 }
                 else
                 {
@@ -181,14 +181,14 @@ namespace psw.controllers
 
                                 respuesta.updateRespuesta("206", resp205, "success");
                             }
-                     
+
                         }
                         else
                         {
                             var resp306 = client.get("respuesta/" + 306);
                             respuesta.updateRespuesta("306", resp306);
                         }
-                          
+
                     }
                     else
                     {
@@ -233,10 +233,10 @@ namespace psw.controllers
                         var newUserExists = client.get("usuarios/" + usuario.oldUser);
                         if (newUserExists != null)
                         {
-                            if ( usuario.newUser.Any( char.IsDigit ) && !usuario.newUser.Any(char.IsWhiteSpace) && usuario.newUser.Any(char.IsLetter))
+                            if (usuario.newUser.Any(char.IsDigit) && !usuario.newUser.Any(char.IsWhiteSpace) && usuario.newUser.Any(char.IsLetter))
                             {
-                                
-                                if (usuario.newPass.Length >= 8 && usuario.newPass.Any(char.IsDigit) )
+
+                                if (usuario.newPass.Length >= 8 && usuario.newPass.Any(char.IsDigit))
                                 {
                                     string passEncrypt = Encrypt.GetMD5(usuario.newPass);
                                     SetResponse response = client.Cliente.Set("usuarios/" + usuario.newUser, passEncrypt);
@@ -290,6 +290,160 @@ namespace psw.controllers
             return Ok(respuesta);
         }
 
+        [HttpPost("set/user_info")]
+        public ActionResult setUserInfo([FromHeader] string Authorization, [FromBody] userInfo usuario)
+        {
+            FireBase client = new FireBase();
+
+            LoginRequet u = _tokenService.ReadToken(Authorization);
+            var user = u.name;
+            var pass = u.password;
+            var respuesta = new Respuesta();
+            var contr = client.get("usuarios/" + user);
+            if (contr != null)
+            {
+
+                var permiso = client.get("usuarios_info/" + user);
+
+                if (Encrypt.GetMD5(pass) == contr)
+                {
+
+                    if (permiso["rol"] == "rh")
+                    {
+                        var userExist = client.get("usuarios_info/" + usuario.searchedUser);
+                        if (userExist == null)
+                        {
+                            JSONValidator schema = new JSONValidator();
+                            if(schema.IsJsonValid( JsonConvert.SerializeObject(usuario.userInfoJSON )))
+                            {
+                                UserInfoJSON us = usuario.userInfoJSON;
+                                if (us.correo != null && us.nombre != null && us.rol != null && us.telefono.ToString() != null)
+                                {
+                                    SetResponse response = client.Cliente.Set("usuarios_info/" + usuario.searchedUser, usuario.userInfoJSON);
+                                    if (response != null)
+                                    {
+                                        var resp = client.get("respuesta/" + 208);
+                                        respuesta.updateRespuesta(
+                                            "208",
+                                            resp,
+                                            "success"
+                                        );
+                                    }
+                                }
+                                else
+                                {
+                                    var resp = client.get("respuesta/" + 312);
+                                    respuesta.updateRespuesta("312", resp);
+                                }
+                            }
+                            else
+                            {
+                                var resp = client.get("respuesta/" + 311);
+                                respuesta.updateRespuesta("311", resp);
+                            }
+                        }
+                        else
+                        {
+                            var resp = client.get("respuesta/" + 310);
+                            respuesta.updateRespuesta("310", resp);
+                        }
+
+                    }
+                    else
+                    {
+                        var resp305 = client.get("respuesta/" + 305);
+                        respuesta.updateRespuesta("305", resp305);
+                    }
+
+                }
+                else
+                {
+                    return Unauthorized();
+                }
+            }
+            else
+            {
+                return Unauthorized();
+            }
+            return Ok(respuesta);
+        }
+        [HttpPost("update/user_info")]
+        public ActionResult updateUserInfo([FromHeader] string Authorization, [FromBody] userInfo usuario)
+        {
+            FireBase client = new FireBase();
+
+            LoginRequet u = _tokenService.ReadToken(Authorization);
+            var user = u.name;
+            var pass = u.password;
+            var respuesta = new Respuesta();
+            var contr = client.get("usuarios/" + user);
+            if (contr != null)
+            {
+
+                var permiso = client.get("usuarios_info/" + user);
+
+                if (Encrypt.GetMD5(pass) == contr)
+                {
+
+                    if (permiso["rol"] == "rh")
+                    {
+                        var userExist = client.get("usuarios_info/" + usuario.searchedUser);
+                        if (userExist != null)
+                        {
+                            JSONValidator schema = new JSONValidator();
+                            if (schema.IsJsonValid(JsonConvert.SerializeObject(usuario.userInfoJSON)))
+                            {
+                                UserInfoJSON us = usuario.userInfoJSON;
+                                if (us.correo != null && us.nombre != null && us.rol != null && us.telefono.ToString() != null)
+                                {
+                                    SetResponse response = client.Cliente.Set("usuarios_info/" + usuario.searchedUser, usuario.userInfoJSON);
+                                    if (response != null)
+                                    {
+                                        var resp = client.get("respuesta/" + 209);
+                                        respuesta.updateRespuesta(
+                                            "209",
+                                            resp,
+                                            "success"
+                                        );
+                                    }
+                                }
+                                else
+                                {
+                                    var resp = client.get("respuesta/" + 312);
+                                    respuesta.updateRespuesta("312", resp);
+                                }
+                            }
+                            else
+                            {
+                                var resp = client.get("respuesta/" + 311);
+                                respuesta.updateRespuesta("311", resp);
+                            }
+                        }
+                        else
+                        {
+                            var resp = client.get("respuesta/" + 313);
+                            respuesta.updateRespuesta("313", resp);
+                        }
+
+                    }
+                    else
+                    {
+                        var resp305 = client.get("respuesta/" + 305);
+                        respuesta.updateRespuesta("305", resp305);
+                    }
+
+                }
+                else
+                {
+                    return Unauthorized();
+                }
+            }
+            else
+            {
+                return Unauthorized();
+            }
+            return Ok(respuesta);
+        }
         [AllowAnonymous]
         [HttpPost("login")]
         public ActionResult Post([FromBody]LoginRequet user)
