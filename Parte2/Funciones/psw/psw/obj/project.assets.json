@@ -5048,24 +5048,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\afb19\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\benc-\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\afb19\\Pictures\\d\\dw\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj",
+      "projectUniqueName": "C:\\xampp\\htdocs\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj",
       "projectName": "psw",
-      "projectPath": "C:\\Users\\afb19\\Pictures\\d\\dw\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj",
-      "packagesPath": "C:\\Users\\afb19\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\afb19\\Pictures\\d\\dw\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\obj\\",
+      "projectPath": "C:\\xampp\\htdocs\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj",
+      "packagesPath": "C:\\Users\\benc-\\.nuget\\packages\\",
+      "outputPath": "C:\\xampp\\htdocs\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\afb19\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\benc-\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
