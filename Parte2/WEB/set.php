@@ -26,15 +26,63 @@
       document.addEventListener("DOMContentLoaded", function(e) {
 
       var miForm = document.getElementById('miForm');
-      miForm.onsubmit = function(e) {
+      miForm.onsubmit = async function(e) {
         e.preventDefault();
         var formData = new FormData(this);
         var jsonData = {};
         for (var [k, v] of formData) {
           jsonData[k] = v;
         }
+     
         console.log(jsonData);
+        let name = jsonData.usernameA;
+        let password = jsonData.passwordA
+        let data = {
+          name,
+          password
+        };
+         var url = 'https://localhost:44332/api/setUser/login';
+         let response  = await fetch(url, {
+         headers: {
+           'Accept': 'application/json',
+           'Content-Type': 'application/json'
+         },
+         body: JSON.stringify(data),
+         method: 'POST', 
+      
+         }).then(res => res.json())
+           .then(response => response);
+      console.log(response);
+      data = {
+        name: jsonData.username,
+        password: jsonData.password
       }
+
+      url = 'https://localhost:44332/api/setUser/set/user';
+      response  = await fetch(url, {
+         headers: {
+           'Accept': 'application/json',
+           'Content-Type': 'application/json',
+           'Authorization': 'Bearer ' + response.token
+         },
+         body: JSON.stringify(data),
+         method: 'POST', 
+      
+         }).then(res => res.json())
+           .then(response => response);
+      console.log(response);
+      let output = document.querySelector('#output');
+      console.log(`output ${output}`);
+      let mensaje;
+      if(response.status === 'success')
+         mensaje = response.message;
+      else
+         mensaje = `Error: ${response.message}`;
+      output.innerHTML = mensaje;
+      
+      console.log(data)
+      }
+      
 
       });
     </script>
@@ -144,7 +192,7 @@
     </div>
     <div class="form-group">
     <h6 for="passA" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Contraseña
-    <td><input type="text" name="passwordA" value="" /></td></h6>
+    <td><input type="text" name="passwordA" id="password" value="" /></td></h6>
     </div>
     <br>
     <h5>Ingrese los datos del usuario que desea registrar: </h5>
@@ -166,7 +214,7 @@
     
         <br>
         <br>
-        <output name="message"> </output>
+        <output name="message" id="output"> </output>
         <br>
         <br>
         
