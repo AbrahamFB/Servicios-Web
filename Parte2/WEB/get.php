@@ -21,9 +21,11 @@
 
       gtag('config', 'UA-23019901-1');
 
+      var name = document.getElementById("name").value;
+      var password = document.getElementById("password").value;
       function sendForm() {      
       var url = 'https://localhost:44332/api/setUser/login';
-      var data = '{"name": "pruebas1", "password": "12345678a"}';
+      var data = '{"name":'+ name + ','+ '"password":'+ password+'}';
 
       fetch(url, {
         headers: {
@@ -144,11 +146,11 @@
     <form action="" method="post" class="form_contact" id="miForm" onsubmit="return false"> 
     <h5>Ingrese sus credenciales: </h5>
     <h6 for="userA" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Usuario
-    <td><input type="text" name="usernameA" id="usernameA" value="" /></td></h6>
+    <td><input type="text" name="usernameA" id="name" value="" /></td></h6>
     
     <div class="form-group">
     <h6 for="passA" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Contraseña
-    <td><input type="text" name="passwordA" value="" /></td></h6>
+    <td><input type="text" name="password" id="password" value="" /></td></h6>
     </div>
     <br>
     <button onclick="sendForm()" type="submit" class="btn btn-dark" value="Enviar" id="btnSend">Ver usuarios</button>
@@ -159,7 +161,7 @@
  
      <br>
       <div class = "container"> <table class = "table table-striped">
-         <h3> Lista de usuarios </h3> <p> </p> <thead> <tr> <th> Nombre del usuario </th> <th> Correo </th><th> Rol </th> <th> Teléfono </th> </tr> </thead> <body> 
+         <h3> Lista de usuarios </h3> <p> </p> <thead> <tr> <th> Nombre del usuario </th> </tr> </thead> <body> 
             </body> </table>
     </div>
     <br>

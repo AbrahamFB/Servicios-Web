@@ -20,35 +20,85 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-23019901-1');
+
+      var name = document.getElementById("name").value;
+      var password = document.getElementById("password").value;
+      function sendForm() {      
+      var url = 'https://localhost:44332/api/setUser/login';
+      var data = '{"name":'+ name + ','+ '"password":'+ password+'}';
+
+      fetch(url, {
+        headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+          body: data,
+          method: 'POST', 
+         
+        }).then(res => res.json())
+        .then(response => console.log('Success:', response));
+    }
     </script>
 
     <style>
-      
-      #subtitulo{
-        font-weight: 640;
+
+#titulo{
+        color: #FFFFFF;
+        width: 900px;
+        height: 40px;
+        text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          background-color: #000000;
       }
-      #box,#titulo{
-          width: 600px;
+      #box{
+        margin-top: 0px;
+          width: 900px;
           text-align: center;
           margin-left: auto;
           margin-right: auto;
-
+          height: 500px;
+          background-color: #FFFFFF;
+          margin: auto;
+      } 
+      input{
+        width: 200px;
       }
-      #box{
-          background-color: #F6F6F6 ;
+      #usernameA{
+        width: 225px;
+      } 
+      
+      #subtitulo{
+        font-weight: 640;
+       
       }
       .form-group{
           width: 400px;
           margin-left: auto;
           margin-right: auto;
       }
+      .lista{
+          
+        
+          width: 550px;
+        float: left;
+        height: auto;
+        
+      }
       .mensaje{
         text-align: left;
-        background-color:#ffffff;
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
+        width: 280px;
+        float: left;
+        background-color: #CCC9C9A9;
+        margin-left: 50px;
+        margin-right: 20px;
+        height: 150px;
+        
       }
+      .conteiner{
+        height: auto;
+      }
+      
 
     </style>
 
@@ -83,44 +133,58 @@
   </div>
 </nav>
 
+
 <br>
 
-<!--getUserInfo-->
-<form>
-  
-  <div id="box">
-    <h1 id="titulo">Ver información de usuario</h1>
 
+<!--getUser-->
+
+<h2 id="titulo">Ver información de usuarios</h2>
+  <div id="box">
+    <div class="box">
+      <br>
+    <form action="" method="post" class="form_contact" id="miForm" onsubmit="return false"> 
+    <h5>Ingrese sus credenciales: </h5>
+    <h6 for="userA" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Usuario
+    <td><input type="text" name="usernameA" id="name" value="" /></td></h6>
+    
     <div class="form-group">
-      <h3 id="subtitulo" for="userInfo" class="form-label mt-4">Usuario</h3>
-      <input type="nombreUsuario" class="form-control" id="searchUser" placeholder="Nombre de usuario" aria-describedby="get_info">
+    <h6 for="passA" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Contraseña
+    <td><input type="text" name="password" value="" /></td></h6>
     </div>
     <br>
-    <div>
-    <button type="button" class="btn btn-dark" id="get_info">getUserInfo</button>
+    <button onclick="sendForm()" type="submit" class="btn btn-dark" value="Enviar" id="btnSend">Ver información de usuarios</button>
+    </form>
     </div>
-
-    <div class="form-group">
+    <div class="lista">
+      <!--getUserInfo-->
+ 
      <br>
       <div class = "container"> <table class = "table table-striped">
-         <h2> Información </h2> <p> </p> <thead> <tr> <th> Nombre </th> <th> Correo </th><th> Rol </th> <th> Teléfono </th> </tr> </thead> <body> 
+         <h3> Lista de usuarios </h3> <p> </p> <thead> <tr> <th> Nombre del usuario </th> <th> Correo </th><th> Rol </th> <th> Teléfono </th> </tr> </thead> <body> 
             </body> </table>
     </div>
-    </div>
     <br>
-    <h3 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Mensaje</h3>
+</div>
+<br>
+  <h5 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Mensaje</h5>
     <div class="mensaje">
     
-        <output name="code">code: </output>
+        
         <br>
-        <output name="message">message: </output>
+        <output name="message"> </output>
         <br>
-        <output name="status">status: </output>
+        
     </div>
     <br>
   </div>
-</form>
+    
 
+
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
@@ -131,6 +195,7 @@
 <br>
 
 </body>
+
  <!-- Site footer -->
  <footer class="site-footer">
       <div class="container">

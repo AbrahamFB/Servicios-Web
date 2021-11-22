@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\xampp\\htdocs\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj": {}
+    "D:\\Archivos de programas\\SW\\htdocs\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj": {}
   },
   "projects": {
-    "C:\\xampp\\htdocs\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj": {
+    "D:\\Archivos de programas\\SW\\htdocs\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\xampp\\htdocs\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj",
+        "projectUniqueName": "D:\\Archivos de programas\\SW\\htdocs\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj",
         "projectName": "psw",
-        "projectPath": "C:\\xampp\\htdocs\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj",
-        "packagesPath": "C:\\Users\\benc-\\.nuget\\packages\\",
-        "outputPath": "C:\\xampp\\htdocs\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\obj\\",
+        "projectPath": "D:\\Archivos de programas\\SW\\htdocs\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj",
+        "packagesPath": "C:\\Users\\lizom\\.nuget\\packages\\",
+        "outputPath": "D:\\Archivos de programas\\SW\\htdocs\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\benc-\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lizom\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
