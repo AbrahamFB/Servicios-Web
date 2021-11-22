@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\xampp\\htdocs\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj": {}
+    "C:\\Users\\afb19\\Pictures\\d\\dw\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj": {}
   },
   "projects": {
-    "C:\\xampp\\htdocs\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj": {
+    "C:\\Users\\afb19\\Pictures\\d\\dw\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\xampp\\htdocs\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj",
+        "projectUniqueName": "C:\\Users\\afb19\\Pictures\\d\\dw\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj",
         "projectName": "psw",
-        "projectPath": "C:\\xampp\\htdocs\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj",
-        "packagesPath": "C:\\Users\\benc-\\.nuget\\packages\\",
-        "outputPath": "C:\\xampp\\htdocs\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\obj\\",
+        "projectPath": "C:\\Users\\afb19\\Pictures\\d\\dw\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\psw.csproj",
+        "packagesPath": "C:\\Users\\afb19\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\afb19\\Pictures\\d\\dw\\Servicios-Web\\Parte2\\Funciones\\psw\\psw\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\benc-\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\afb19\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -76,6 +80,10 @@
               "target": "Package",
               "version": "[2.2.29, )"
             },
+            "NETCore.Encrypt": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
@@ -95,6 +103,10 @@
             "System.Runtime.Serialization.Json": {
               "target": "Package",
               "version": "[4.3.0, )"
+            },
+            "System.Security.Cryptography.Cng": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "System.Text.Json": {
               "target": "Package",

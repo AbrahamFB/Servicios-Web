@@ -29,7 +29,9 @@ namespace psw
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-                    new Claim(ClaimTypes.Name, user.name)
+                    new Claim(ClaimTypes.Name, user.name),
+                    new Claim(ClaimTypes.NameIdentifier, user.password)
+
                 }),
                 Expires = DateTime.UtcNow.AddHours(1),
                 SigningCredentials = new SigningCredentials(_ssKey, SecurityAlgorithms.HmacSha256Signature)
