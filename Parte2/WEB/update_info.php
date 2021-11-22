@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="../_assets/css/custom.min.css">
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23019901-1"></script>
+
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -21,8 +22,8 @@
 
       gtag('config', 'UA-23019901-1');
 
-        //para crear el JSON
-        document.addEventListener("DOMContentLoaded", function(e) {
+      //para crear el JSON
+      document.addEventListener("DOMContentLoaded", function(e) {
 
       var miForm = document.getElementById('miForm');
       miForm.onsubmit = function(e) {
@@ -36,30 +37,60 @@
       }
 
       });
+
+
+      ///formulario miform2
+      document.addEventListener("DOMContentLoaded", function(i) {
+
+      var miForm2 = document.getElementById('miForm2');
+      miForm2.onsubmit = function(i) {
+        i.preventDefault();
+        var formData = new FormData(this);
+        var jsonData = {};
+        for (var [k, v] of formData) {
+          jsonData[k] = v;
+        }
+        console.log(jsonData);
+      }
+      });
+
+      function Ocultar(){
+      document.getElementById('obj1').style.display = 'none';
+      }
+      function mostrar(){
+      document.getElementById('obj2').style.display = 'block';
+      }
     </script>
 
     <style>
-      
-     
-
-      #subtitulo{
-        font-weight: 640;
-      }
 
       #titulo{
-          width: 600px;
-          text-align: center;
+        color: #FFFFFF;
+        width: 900px;
+        height: 40px;
+        text-align: center;
           margin-left: auto;
           margin-right: auto;
           background-color: #000000;
-          
+      }
+      #subtitulo{
+        font-weight: 640;
       }
       #box{
-        width: 600px;
+        margin-top: 0px;
+          width: 900px;
           text-align: center;
           margin-left: auto;
           margin-right: auto;
-          background-color: #FFFFFF ;
+          height: 650px;
+          background-color: #FFFFFF;
+          margin: auto;
+      }
+      .user_info{
+        width: 550px;
+        float: left;
+        height: auto;
+       
       }
       .form-group{
           width: 400px;
@@ -68,10 +99,21 @@
       }
       .mensaje{
         text-align: left;
-        background-color:#ffffff;
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
+        width: 280px;
+        float: left;
+        background-color: #CCC9C9A9;
+        margin-left: 50px;
+        margin-right: 20px;
+        height: 150px;
+      }
+      input{
+        width: 200px;
+      }
+      #usernameA{
+        width: 265px;
+      }
+      #contra{
+        width: 240px;
       }
 
     </style>
@@ -109,87 +151,96 @@
 
 <br>
 
-<!--updateUserInfo-->
-  
+<!--setUserInfo-->
+
+<h2 id="titulo">Actualizar información de usuario</h2>
   <div id="box">
-    <h1 id="titulo">Actualizar información de usuario</h1>
-    <div class="form-group">
-      <h2 id="subtitulo" for="userInfo" class="form-label mt-4">Nombre</h2>
-      <input type="nombreUsuario" class="form-control" id="searchUser" placeholder="Nombre de usuario" aria-describedby="searchUser">
-    </div>
     <br>
-    <div>
-    <button type="button" class="btn btn-dark" id="searchUser">Buscar</button>
+  <div class="user_info">
+    <div id="obj1">
+
+<form action="" method="post" class="form_contact" id="miForm">
+<h5>Ingrese sus credenciales: </h5>
+<div class="form-group">
+  <h6 for="userA" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Usuario
+  <td><input type="text" name="usernameA" id="usernameA" value="" /></td></h6>
+  </div>
+  <div class="form-group">
+  <h6 for="passA" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Contraseña
+  <td><input type="text" name="passwordA" value="" id="contra"/></td></h6>
+  </div>
+  <div class="form-group">
+  <h6 for="searchedUser" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Usuario a buscar
+  <td><input type="text" name="searchedUser" id="searchedUser" value="" /></td></h6>
+  </div>
+  <br>
+  
+  <button type="submit" class="btn btn-dark" value="Enviar" id="btnSend" onclick="Ocultar(),mostrar()">Buscar Usuario</button>
+</form>
+</div>
+<br>
+
+  <!-- formulario para editar al usuario buscado-->
+  <div id="obj2" style="display: none;">
+  <form action="" method="post" class="form_contact" id="miForm2">
+  <h5>Ingrese los datos del usuario que desea actualizar: </h5>
+  <div class="form-group">
+  <h6 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Nombre de usuario</h6>
+  <td><input type="text" name="username" id="username" value="" /></td>
+  </div>
+  <div class="form-group">
+  <h6 for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Contraseña</h6>
+  <td><input type="text" name="password" value="" /></td>
+  </div>
+  <div class="form-group">
+    <h6 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Nombre</h6>
+    <td><input type="text" name="name" id="name" value=""/></td>
     </div>
     
-    <br>
     <div class="form-group">
-      <form>    
-      <div class = "container"> <table class = "table table-striped">
-         <h2> Usuario </h2> <p> </p> <thead> <tr> <th> Nombre </th> <th> Correo </th><th> Rol </th> <th> Teléfono </th> </tr> </thead> <body> 
-            </body> </table>
+    <h6 for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Correo</h6>
+    <td><input type="text" name="correo" value="" /></td>
     </div>
-    <br>
-    </div>
-<form action="" method="post" class="form_contact" id="miForm">
-
-<div class="user_info">
-<div class="form-group">
-  <h2 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Nombre</h2>
-  <td><input type="text" name="name" id="name" value="Angel"/></td>
-  </div>
-  <div class="form-group">
-  <h2 for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Correo</h2>
-  <td><input type="text" name="correo" value="angel@gmail.com" /></td>
-  </div>
-  <div class="form-group">
- 
-  <div class="form-group">
-      <h2 id="subtitulo" for="rol" class="form-label mt-4">Rol</h2>
+    
+    <div class="form-group">
+      <h6 id="subtitulo" for="rol" class="form-label mt-4">Rol</h6>
       <select type="text" name="rol" id="rol" class="form-select" id="exampleSelect1">
         <option>Ventas</option>
         <option>Almacen</option>
         <option>Recursos humanos</option>
       </select>
     </div>
-
-  </div>
-  <div class="form-group">
-  <h2 for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Telefono</h2>
-  <td><input type="text" name="telefono" value="23762378" /></td>
-  </div>
-<br>
-  <button type="submit" class="btn btn-dark" value="Enviar" id="btnSend">updateUserInfo</button>
-
-</div>
-
-  
+    
+    <div class="form-group">
+    <h6 for="pass" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Telefono</h6>
+    <td><input type="text" name="telefono" value="" /></td>
+    </div>
   <br>
-<h3 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Mensaje</h3>
+
+
+  <button type="submit" class="btn btn-dark" value="Enviar" id="btnSend">setInfo</button>
+</form>
+</div>
+  </div>
+
+ 
+  <h3 for="user" id="subtitulo" for="exampleTextarea" class="form-label mt-4">Mensaje</h3>
     <div class="mensaje">
     
-        <output name="code">code: </output>
+        
         <br>
-        <output name="message">message: </output>
+        <output name="message"> </output>
         <br>
-        <output name="status">status: </output>
+        
     </div>
     <br>
   </div>
-</div>
 
-</form>
-    
-
-    
-
-
-<br>
-<br>
-<br>
-<br>
+  <br>
+  <br>
 
 </body>
+
  <!-- Site footer -->
  <footer class="site-footer">
       <div class="container">

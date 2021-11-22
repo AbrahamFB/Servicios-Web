@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-<title>ipdateUser</title>
+<title>updateUser</title>
 <meta name="viewport" content="initial-scale=1.0">
   <meta charset="utf-8"> 
   <link rel="stylesheet" href="styles.css">
