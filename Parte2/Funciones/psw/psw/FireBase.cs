@@ -37,7 +37,16 @@ namespace psw
         //dynamic respuesta = js.Deserialize<dynamic>(res.Body);
         return respuesta;
     }
-    public Dictionary<string, Dictionary<string, dynamic>> get1(string coleccion)
+
+
+    public Dictionary<string, dynamic> get1(string coleccion)
+    {
+        FirebaseResponse res = client.Get(coleccion);
+            var respuesta = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(res.Body);
+            
+        return respuesta;
+    }
+    public Dictionary<string, Dictionary<string, dynamic>> get2(string coleccion)
     {
         FirebaseResponse res = client.Get(coleccion);
             var respuesta = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, dynamic>>>(res.Body);

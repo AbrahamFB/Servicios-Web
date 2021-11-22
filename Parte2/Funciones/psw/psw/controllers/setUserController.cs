@@ -121,7 +121,7 @@ namespace psw.controllers
                     {
                         ArrayList lista = new ArrayList();
 
-                        var usuarios = client.get1("usuarios_info/");
+                        var usuarios = client.get2("usuarios_info/");
                         //var respuesta = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(usuarios.);
 
                         var resp205 = client.get("respuesta/" + 205);
