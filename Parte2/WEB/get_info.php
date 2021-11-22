@@ -77,12 +77,25 @@
           mensaje = `Error: ${response.message}`;
         }
 
-        use.innerHTML = usuario;
+        // use.innerHTML = usuario;
+        // console.log("usuario:" +usuario);
+
+
         output.innerHTML = mensaje;
-        // let table = document.getElementById("tab");
-        // let arr = usuario;
+        let table = document.getElementById("tab");
+        let arr = Object.values(usuario);
+
+        console.log(arr);
+        arr.forEach(element => {
+          console.log(element.rol);
+          use.innerHTML += "<tr><td>" + element.nombre + "</td><td>" + element.correo + "</td><td>" + element.rol + "</td> <td>" + element.telefono + "</td></tr>";
+        });
+        //  t = 0;
+
+
         // arr.forEach((el, index) => {
-        //   table.innerHTML += "<tr><td>" + el + "</td></tr>";
+
+        //   table.innerHTML += "<tr><td>" + el[1] + "</td><td>" + el + "</td> <td>" + el + "</td> <td>" + el + "</td> <td>" + el + "</td></tr>";
         // });
 
 
@@ -102,13 +115,17 @@
       background-color: #000000;
     }
 
+
     #box {
       margin-top: 0px;
       width: 900px;
       text-align: center;
       margin-left: auto;
       margin-right: auto;
-      height: 500px;
+      min-height: 500px;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 10px;
       background-color: #FFFFFF;
       margin: auto;
     }
@@ -231,8 +248,9 @@
             </tr>
           </thead>
 
-          <body>
-          </body>
+          <tbody id="us">
+
+          </tbody>
         </table>
       </div>
       <br>
