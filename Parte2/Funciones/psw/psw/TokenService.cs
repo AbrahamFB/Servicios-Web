@@ -41,6 +41,20 @@ namespace psw
 
             return tokenHandler.WriteToken(token);
         }
+        public LoginRequet ReadToken(string Authorization)
+        {
+            LoginRequet usuario = new LoginRequet();
+            var token = Authorization.StartsWith("Bearer ") ? Authorization.Substring(7) : Authorization;
+            var stream = token;
+            var handler = new JwtSecurityTokenHandler();
+            var jsonToken = handler.ReadToken(stream);
+            var tokenS = jsonToken as JwtSecurityToken;
+
+            
+            usuario.name = tokenS.Claims.First(claim => claim.Type == "unique_name").Value;
+            usuario.password = tokenS.Claims.First(claim => claim.Type == "nameid").Value;
+            return usuario;
+        }
 
     }
 }

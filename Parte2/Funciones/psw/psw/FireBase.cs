@@ -112,6 +112,13 @@ namespace psw
         public string password { get; set; }
     }
 
+    public class UpdateUser
+    {
+        public string oldUser { get; set; }
+        public string newUser { get; set; }
+        public string newPass { get; set; }
+    }
+
     public class userInfo
     {
         public string nombre { get; set; }

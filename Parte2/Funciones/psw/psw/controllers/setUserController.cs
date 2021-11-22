@@ -10,6 +10,8 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Collections;
 using Newtonsoft.Json;
+using FireSharp.Response;
+using System.Text.RegularExpressions;
 
 namespace psw.controllers
 {
@@ -105,8 +107,6 @@ namespace psw.controllers
             var pass = tokenS.Claims.First(claim => claim.Type == "nameid").Value;
 
 
-
-            var datos = user + " " + pass;
             var respuesta = new Respuesta();
             var contr = client.get("usuarios/" + user);
             if (contr != null)
@@ -149,19 +149,160 @@ namespace psw.controllers
             return Ok(respuesta);
 
         }
+        [HttpPost("set/user")]
+        public ActionResult setUser([FromHeader] string Authorization, [FromBody] LoginRequet usuario)
+        {
+            FireBase client = new FireBase();
 
+            LoginRequet u = _tokenService.ReadToken(Authorization);
+            var user = u.name;
+            var pass = u.password;
+            var respuesta = new Respuesta();
+            var contr = client.get("usuarios/" + user);
+            if (contr != null)
+            {
+
+                var permiso = client.get("usuarios_info/" + user);
+
+                if (Encrypt.GetMD5(pass) == contr)
+                {
+
+                    if (permiso["rol"] == "rh")
+                    {
+                        var newUserExists = client.get("usuarios/" + usuario.name);
+                        if (newUserExists == null)
+                        {
+
+                            string passEncrypt = Encrypt.GetMD5(usuario.password);
+                            SetResponse response = client.Cliente.Set("usuarios/" + usuario.name, passEncrypt);
+                            if (response != null)
+                            {
+                                var resp205 = client.get("respuesta/" + 206);
+
+                                respuesta.updateRespuesta("206", resp205, "success");
+                            }
+                     
+                        }
+                        else
+                        {
+                            var resp306 = client.get("respuesta/" + 306);
+                            respuesta.updateRespuesta("306", resp306);
+                        }
+                          
+                    }
+                    else
+                    {
+                        var resp305 = client.get("respuesta/" + 305);
+                        respuesta.updateRespuesta("305", resp305);
+                    }
+
+                }
+                else
+                {
+                    return Unauthorized();
+                }
+            }
+            else
+            {
+                return Unauthorized();
+            }
+            return Ok(respuesta);
+        }
+
+        [HttpPost("update/user")]
+        public ActionResult updateUser([FromHeader] string Authorization, [FromBody] UpdateUser usuario)
+        {
+            FireBase client = new FireBase();
+
+            LoginRequet u = _tokenService.ReadToken(Authorization);
+            var user = u.name;
+            var pass = u.password;
+            var respuesta = new Respuesta();
+            var contr = client.get("usuarios/" + user);
+            if (contr != null)
+            {
+
+                var permiso = client.get("usuarios_info/" + user);
+
+                if (Encrypt.GetMD5(pass) == contr)
+                {
+
+                    if (permiso["rol"] == "rh")
+                    {
+
+                        var newUserExists = client.get("usuarios/" + usuario.oldUser);
+                        if (newUserExists != null)
+                        {
+                            if ( usuario.newUser.Any( char.IsDigit ) && !usuario.newUser.Any(char.IsWhiteSpace) && usuario.newUser.Any(char.IsLetter))
+                            {
+                                
+                                if (usuario.newPass.Length >= 8 && usuario.newPass.Any(char.IsDigit) )
+                                {
+                                    string passEncrypt = Encrypt.GetMD5(usuario.newPass);
+                                    SetResponse response = client.Cliente.Set("usuarios/" + usuario.newUser, passEncrypt);
+                                    if (response != null)
+                                    {
+                                        var resp = client.get("respuesta/" + 207);
+                                        respuesta.updateRespuesta(
+                                            "207",
+                                            resp,
+                                            "successs"
+                                       );
+                                        client.Cliente.Delete("usuarios/" + usuario.oldUser);
+                                    }
+                                }
+                                else
+                                {
+                                    var resp307 = client.get("respuesta/" + 309);
+                                    respuesta.updateRespuesta("309", resp307);
+                                }
+
+                            }
+                            else
+                            {
+                                var resp307 = client.get("respuesta/" + 308);
+                                respuesta.updateRespuesta("308", resp307);
+                            }
+                        }
+
+                        else
+                        {
+                            var resp307 = client.get("respuesta/" + 307);
+                            respuesta.updateRespuesta("307", resp307);
+                        }
+                    }
+                    else
+                    {
+                        var resp305 = client.get("respuesta/" + 305);
+                        respuesta.updateRespuesta("305", resp305);
+                    }
+
+                }
+                else
+                {
+                    return Unauthorized();
+                }
+            }
+            else
+            {
+                return Unauthorized();
+            }
+            return Ok(respuesta);
+        }
 
         [AllowAnonymous]
         [HttpPost("login")]
         public ActionResult Post([FromBody]LoginRequet user)
         {
             var token = _tokenService.CreateToken(user);
+            
             return Ok(new
             {
                 token = token
             }) ;
 
         }
+
     }
  
 
