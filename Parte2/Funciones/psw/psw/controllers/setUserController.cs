@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.Text;
 using System.Collections;
+using Newtonsoft.Json;
 
 namespace psw.controllers
 {
@@ -120,9 +121,9 @@ namespace psw.controllers
                     {
                         ArrayList lista = new ArrayList();
 
-                        var usuarios = client.get1("usuarios_info/");
-                        
-                        
+                        var usuarios = client.get2("usuarios_info/");
+                        //var respuesta = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(usuarios.);
+
                         var resp205 = client.get("respuesta/" + 205);
 
                         respuesta.updateRespuesta("205", resp205, "success", usuarios);
@@ -149,19 +150,7 @@ namespace psw.controllers
 
         }
 
-        public class Encrypt
-        {
-            public static string GetMD5(string str)
-            {
-                MD5 md5 = MD5CryptoServiceProvider.Create();
-                ASCIIEncoding encoding = new ASCIIEncoding();
-                byte[] stream = null;
-                StringBuilder sb = new StringBuilder();
-                stream = md5.ComputeHash(encoding.GetBytes(str));
-                for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
-                return sb.ToString();
-            }
-        }
+
         [AllowAnonymous]
         [HttpPost("login")]
         public ActionResult Post([FromBody]LoginRequet user)

@@ -28,7 +28,6 @@ C:\xampp\htdocs\Servicios-Web\Parte2\Funciones\psw\psw\bin\Debug\net6.0\Newtonso
 C:\xampp\htdocs\Servicios-Web\Parte2\Funciones\psw\psw\bin\Debug\net6.0\RestSharp.dll
 C:\xampp\htdocs\Servicios-Web\Parte2\Funciones\psw\psw\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 C:\xampp\htdocs\Servicios-Web\Parte2\Funciones\psw\psw\bin\Debug\net6.0\Vse.Web.Serialization.dll
-C:\xampp\htdocs\Servicios-Web\Parte2\Funciones\psw\psw\bin\Debug\net6.0\System.Web.Extensions.dll
 C:\xampp\htdocs\Servicios-Web\Parte2\Funciones\psw\psw\obj\Debug\net6.0\psw.csproj.AssemblyReference.cache
 C:\xampp\htdocs\Servicios-Web\Parte2\Funciones\psw\psw\obj\Debug\net6.0\psw.dll.config
 C:\xampp\htdocs\Servicios-Web\Parte2\Funciones\psw\psw\obj\Debug\net6.0\Interop.JAVAWEBSTARTLib.dll
@@ -103,3 +102,4 @@ C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\psw\psw\obj\Debug\ne
 C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\psw\psw\obj\Debug\net6.0\psw.csproj.CopyComplete
 C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\psw\psw\obj\Debug\net6.0\psw.genruntimeconfig.cache
 C:\Users\afb19\Pictures\d\dw\Servicios-Web\Parte2\Funciones\psw\psw\bin\Debug\net6.0\NETCore.Encrypt.dll
+C:\xampp\htdocs\Servicios-Web\Parte2\Funciones\psw\psw\bin\Debug\net6.0\NETCore.Encrypt.dll
